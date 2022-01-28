@@ -61,6 +61,8 @@
     <router-link to="/tuto">
       <button class="header__button header__button--search" type="search">search</button>
     </router-link>
+    test
+    
   </header>
 </template>
 
