@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header grid">
     <!-- Place du logo -->
     <router-link to="/">
       <img
@@ -19,7 +19,7 @@
     </router-link>
     <!-- nav du header -->
     <nav class="header__nav nav">
-      <ul class="nav__deroulant">
+      <ul class="nav__main">
         <li class="nav__menu">
           <router-link to="/"> Acceuil </router-link>
         </li>
@@ -42,15 +42,15 @@
         <li class="nav__menu">
           <router-link to="/tuto"> Tutos </router-link>
           <ul class="nav__deroulant">
-            <p>Front</p>
-            <ul>
+            <p class="nav__ligne">Front</p>
+            <ul class="nav__deroulant">
               <li class="nav__ligne"><router-link to="/"> HTML </router-link></li>
               <li class="nav__ligne"><router-link to="/"> CSS </router-link></li>
               <li class="nav__ligne"><router-link to="/"> Figma </router-link></li>
               <li class="nav__ligne"><router-link to="/"> Adobe XD </router-link></li>
             </ul>
-            <p>Back</p>
-            <ul>
+            <p class="nav__ligne">Back</p>
+            <ul class="nav__deroulant">
               <li class="nav__ligne"><router-link to="/"> CMS </router-link></li>
               <li class="nav__ligne"><router-link to="/"> PHP </router-link></li>
               <li class="nav__ligne"><router-link to="/"> MySQL </router-link></li>
@@ -60,7 +60,7 @@
       </ul>
     </nav>
     <router-link to="/tuto">
-      <button class="header__button header__button--search" type="search">search</button>
+      <button class="header__search" type="search">search</button>
     </router-link>
   </header>
 </template>
