@@ -13,13 +13,13 @@ $greenblue:             #03A696;
 $greenbluefonce:        #04BF9D;
 
 /* Text-size styles */
-$title-xxl: 5rem;
-$title-xl: 1.5rem;
-$title-lg: 1.125rem;
-$text-xxl: 3rem;
-$text-xl: 1.375rem;
-$text-md: 0.813rem;
-$text-sm: 0.688rem;
+$title-xxl: rem(80);
+$title-xl: rem(24);
+$title-lg: rem(18);
+$text-xxl: rem(48);
+$text-xl: rem(22);
+$text-md: rem(13);
+$text-sm: rem(11);
 
 /* Font-family styles */
 $font-titre: 'Odibee Sans', cursive;
@@ -29,10 +29,10 @@ $font-text: 'Roboto Condensed', sans-serif;
 $letter-spacing: 0.05em;
 
 /* Espaces */
-$space1x: 8px;
-$space2x: 16px;
-$space3x: 24px;
-$space4x: 48px;
+$space1x: rem(8);
+$space2x: rem(16);
+$space3x: rem(24);
+$space4x: rem(48);
 
 
 
