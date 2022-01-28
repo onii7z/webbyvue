@@ -1,0 +1,29 @@
+.header {
+    height: 200rem;
+
+    &__logo {
+        width: 100px;
+        height: 100px;
+    }
+    &__titre {
+        font-family: $font-titre;
+        font-size: $title-xxl;
+        /* Degrader de la couleur du texte (se trouve aussi dans nav a)*/ 
+        background:-webkit-linear-gradient(right, $skyblue 30%, $green 76%);
+        background-clip:text;
+        -webkit-background-clip:text;
+        color:transparent;
+    }
+    &__button {
+        background: $green;
+        border-radius: 5px;
+        width: 13rem;
+        height: 2.3rem;
+    }
+    &__button--search {
+        background: $white;
+        border-radius: 5px;
+        width: 13rem;
+        height: 2.3rem;
+    }
+}

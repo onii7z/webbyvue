@@ -14,7 +14,7 @@
     <router-link to="/">
       <button class="header__button" type="submit">Connexion</button>
     </router-link>
-    <router-link to="/tuto">
+    <router-link to="/">
       <button class="header__button" type="submit">Inscription</button>
     </router-link>
     <!-- nav du header -->
@@ -28,7 +28,8 @@
           <ul class="nav__deroulant">
             <li class="nav__ligne"><router-link to="/"> Qui sommes-nous ? </router-link></li>
             <li class="nav__ligne"><router-link to="/"> Présentation GEN </router-link></li>
-            <li class="nav__ligne"><router-link to="/"> Nous contacter </router-link></li>          </ul>
+            <li class="nav__ligne"><router-link to="/"> Nous contacter </router-link></li>
+          </ul>
         </li>
         <li class="nav__menu">
           <router-link to="/"> Parcours Initiatique </router-link>
