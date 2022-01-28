@@ -1,0 +1,19 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: $font-text;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: $font-titre;
+}
+// .grid {
+//     display: grid;
+//     grid-template-columns: repeat(12, 1fr);
+//     gap: 30px;
+// }
+
+
