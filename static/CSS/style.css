@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, h6 {
   display: grid;
   -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
-  gap: 1.875rem;
+  grid-column-gap: 1.875rem;
   padding-left: 1.875rem;
   padding-right: 1.875rem;
 }
@@ -35,8 +35,8 @@ img {
 
 .header {
   height: 14.375rem;
-  -ms-grid-rows: 2fr;
-      grid-template-rows: 2fr;
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
 }
 
 .header__logo {
@@ -64,6 +64,8 @@ img {
   height: auto;
   -ms-grid-column: 12;
   grid-column: 12;
+  -ms-grid-row: 1;
+  grid-row: 1;
 }
 
 .header__search {
@@ -72,9 +74,9 @@ img {
   width: auto;
   height: auto;
   -ms-grid-column: 12;
-  grid-column: 12;
+      grid-column-start: 12;
   -ms-grid-row: 2;
-  grid-row: 2;
+      grid-row-start: 2;
 }
 
 .header__nav {

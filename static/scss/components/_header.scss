@@ -1,6 +1,6 @@
 .header {
     height: rem(230);
-    grid-template-rows: 2fr;
+    grid-template-rows: repeat(2, 1fr);
 
     &__logo {
         width: 100px;
@@ -22,14 +22,15 @@
         width: auto;
         height: auto;
         grid-column: 12;
+        grid-row: 1;
     }
     &__search {
         background: $white;
         border-radius: 5px;
         width: auto;
         height: auto;
-        grid-column: 12;
-        grid-row: 2;
+        grid-column-start: 12;
+        grid-row-start: 2;
     }
     &__nav {
         grid-row: 2;

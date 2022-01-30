@@ -14,7 +14,8 @@ h1,h2,h3,h4,h5,h6 {
 .grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: rem(30);
+    grid-column-gap: rem(30);
+    // gap: rem(30);
     padding-left: rem(30);
     padding-right: rem(30);
 }
