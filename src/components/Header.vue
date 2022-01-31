@@ -24,9 +24,9 @@
           <router-link to="/"> Acceuil </router-link>
         </li>
         <li class="nav__menu">
-          <router-link to="/"> A propos </router-link>
+          <router-link to="/quisommes"> A propos </router-link>
           <ul class="nav__deroulant">
-            <li class="nav__ligne"><router-link to="/"> Qui sommes-nous ? </router-link></li>
+            <li class="nav__ligne"><router-link to="/quisommes"> Qui sommes-nous ? </router-link></li>
             <li class="nav__ligne"><router-link to="/"> Présentation GEN </router-link></li>
             <li class="nav__ligne"><router-link to="/"> Nous contacter </router-link></li>
           </ul>

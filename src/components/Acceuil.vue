@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p>testtesttesttesttest</p>
+        <p>Vous vous trouvez dans l'acceuil  veuillez patienter</p>
     </div>
     
 </template>

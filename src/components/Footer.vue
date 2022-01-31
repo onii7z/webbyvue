@@ -1,6 +1,8 @@
 <template>
   <footer>
       <h2>{{ liste.title}} {{ liste.description }}  </h2>
+      <router-link to="/mentions"> Mentions legales </router-link>
+      <router-link to="/"> Conditions d'utilisations </router-link>
   </footer>
 </template>
 
