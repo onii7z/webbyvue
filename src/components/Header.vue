@@ -25,17 +25,15 @@
           <router-link to="/" class="nav__lien"> Acceuil </router-link>
         </li>
         <li class="nav__menu">
-          <router-link to="/quisommes" class="nav__lien"> A propos </router-link>
+          <p class="nav__lien"> A propos </p>
           <ul class="nav__deroulant">
             <li class="nav__ligne"><router-link to="/quisommes" class="nav__lien"> Qui sommes-nous ? </router-link></li>
-            <li class="nav__ligne"><router-link to="/" class="nav__lien"> Présentation GEN </router-link></li>
             <li class="nav__ligne"><router-link to="/" class="nav__lien"> Nous contacter </router-link></li>
           </ul>
         </li>
         <li class="nav__menu">
-          <router-link to="/" class="nav__lien"> Parcours Initiatique </router-link>
+          <router-link to="/" class="nav__lien"> Parcours </router-link>
           <ul class="nav__deroulant">
-            <li class="nav__ligne"><router-link to="/" class="nav__lien"> Présentation </router-link></li> 
             <li class="nav__ligne"><router-link to="/" class="nav__lien"> Liste des parcours </router-link></li> 
             <li class="nav__ligne"><router-link to="/" class="nav__lien"> Lexique </router-link></li> 
           </ul>
