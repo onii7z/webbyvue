@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Acceuil from '@/components/Acceuil'
-import Tuto from '@/components/Tuto'
+import Tuto from '@/components/pages/Tuto'
 import Mentions from '@/components/pages/Mentions'
 import QuiSommes from '@/components/pages/QuiSommes'
 
