@@ -19,8 +19,8 @@
     </nav>
     <div class="footer__link">
       <router-link to="/mentions" class="footer__lien"> Mentions légales </router-link>
-      <router-link to="/" class="footer__lien"> Politique de confidentialité </router-link>
-      <router-link to="/" class="footer__lien"> Conditions d'utilisation </router-link>
+      <router-link to="/politique" class="footer__lien"> Politique de confidentialité </router-link>
+      <router-link to="/utilisation" class="footer__lien"> Conditions d'utilisation </router-link>
     </div>
   </footer>
 </template>
