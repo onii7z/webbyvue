@@ -6,6 +6,7 @@ import Mentions from '@/components/pages/Mentions'
 import QuiSommes from '@/components/pages/QuiSommes'
 import Utilisation from '@/components/pages/Utilisation'
 import Politique from '@/components/pages/Politique'
+import Presentation_parcours from '@/components/pages/Presentation_parcours'
 
 Vue.use(Router)
 
@@ -17,5 +18,6 @@ export default new Router({
     {path: '/quisommes', name: 'QuiSommes', component: QuiSommes},
     {path: '/utilisation', name: 'Utilisation', component: Utilisation},
     {path: '/politique', name: 'Politique', component: Politique},
+    {path: '/presentation_parcours', name: 'Presentation_parcours', component: Presentation_parcours},
   ]
 })
