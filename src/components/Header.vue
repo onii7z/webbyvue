@@ -1,9 +1,8 @@
 <template>
   <header class="header grid">
     <!-- Place du logo -->
-    <router-link to="/">
-      <img
-        class="header__logo"
+    <router-link to="/" class="header__logo">
+      <img 
         src="../assets/webbie_logo_3.gif"
         alt="Webby"
       />
@@ -11,56 +10,58 @@
     <!-- titre -->
     <h1 class="header__titre">{{ liste.title }} {{ liste.description }}</h1>
     <!-- inscription/connexion -->
-    <router-link to="/">
-      <button class="header__button" type="submit">Connexion</button>
-    </router-link>
-    <router-link to="/">
-      <button class="header__button" type="submit">Inscription</button>
-    </router-link>
+    <div class="header__btn">
+      <router-link to="/">
+        <button  type="submit" class="header__button">Connexion</button>
+      </router-link>
+      <router-link to="/" >
+        <button  type="submit" class="header__button">Inscription</button>
+      </router-link>
+    </div>
     <!-- nav du header -->
     <nav class="header__nav nav">
       <ul class="nav__main">
         <li class="nav__menu">
-          <router-link to="/"> Acceuil </router-link>
+          <router-link to="/" class="nav__lien"> Acceuil </router-link>
         </li>
         <li class="nav__menu">
-          <router-link to="/quisommes"> A propos </router-link>
+          <router-link to="/quisommes" class="nav__lien"> A propos </router-link>
           <ul class="nav__deroulant">
-            <li class="nav__ligne"><router-link to="/quisommes"> Qui sommes-nous ? </router-link></li>
-            <li class="nav__ligne"><router-link to="/"> Présentation GEN </router-link></li>
-            <li class="nav__ligne"><router-link to="/"> Nous contacter </router-link></li>
+            <li class="nav__ligne"><router-link to="/quisommes" class="nav__lien"> Qui sommes-nous ? </router-link></li>
+            <li class="nav__ligne"><router-link to="/" class="nav__lien"> Présentation GEN </router-link></li>
+            <li class="nav__ligne"><router-link to="/" class="nav__lien"> Nous contacter </router-link></li>
           </ul>
         </li>
         <li class="nav__menu">
-          <router-link to="/"> Parcours Initiatique </router-link>
+          <router-link to="/" class="nav__lien"> Parcours Initiatique </router-link>
           <ul class="nav__deroulant">
-            <li class="nav__ligne"><router-link to="/"> Présentation </router-link></li> 
-            <li class="nav__ligne"><router-link to="/"> Liste des parcours </router-link></li> 
-            <li class="nav__ligne"><router-link to="/"> Lexique </router-link></li> 
+            <li class="nav__ligne"><router-link to="/" class="nav__lien"> Présentation </router-link></li> 
+            <li class="nav__ligne"><router-link to="/" class="nav__lien"> Liste des parcours </router-link></li> 
+            <li class="nav__ligne"><router-link to="/" class="nav__lien"> Lexique </router-link></li> 
           </ul>
         </li>
         <li class="nav__menu">
-          <router-link to="/tuto"> Tutos </router-link>
+          <router-link to="/tuto" class="nav__lien"> Tutos </router-link>
           <ul class="nav__deroulant">
             <p class="nav__ligne">Front</p>
             <ul class="nav__deroulant">
-              <li class="nav__ligne"><router-link to="/"> HTML </router-link></li>
-              <li class="nav__ligne"><router-link to="/"> CSS </router-link></li>
-              <li class="nav__ligne"><router-link to="/"> Figma </router-link></li>
-              <li class="nav__ligne"><router-link to="/"> Adobe XD </router-link></li>
+              <li class="nav__ligne"><router-link to="/" class="nav__lien"> HTML </router-link></li>
+              <li class="nav__ligne"><router-link to="/" class="nav__lien"> CSS </router-link></li>
+              <li class="nav__ligne"><router-link to="/" class="nav__lien"> Figma </router-link></li>
+              <li class="nav__ligne"><router-link to="/" class="nav__lien"> Adobe XD </router-link></li>
             </ul>
             <p class="nav__ligne">Back</p>
             <ul class="nav__deroulant">
-              <li class="nav__ligne"><router-link to="/"> CMS </router-link></li>
-              <li class="nav__ligne"><router-link to="/"> PHP </router-link></li>
-              <li class="nav__ligne"><router-link to="/"> MySQL </router-link></li>
+              <li class="nav__ligne"><router-link to="/" class="nav__lien"> CMS </router-link></li>
+              <li class="nav__ligne"><router-link to="/" class="nav__lien"> PHP </router-link></li>
+              <li class="nav__ligne"><router-link to="/" class="nav__lien"> MySQL </router-link></li>
             </ul>
           </ul>
         </li>
       </ul>
     </nav>
-    <router-link to="/tuto">
-      <button class="header__search" type="search">search</button>
+    <router-link to="/tuto" class="header__btn header__btn--search">
+      <button  type="search" class="header__button header__button--search">search</button>
     </router-link>
   </header>
 </template>

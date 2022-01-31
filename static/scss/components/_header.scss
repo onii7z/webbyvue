@@ -1,7 +1,9 @@
 .header {
     height: rem(230);
+    border-bottom: solid 2px;
+    border-bottom-color: $greenblue;
     grid-template-rows: repeat(2, 1fr);
-
+    padding-top: rem(30);
     &__logo {
         width: 100px;
         height: 100px;
@@ -16,21 +18,21 @@
         color:transparent;
         grid-column: 3 / span 5;
     }
+    &__btn {
+        grid-column: 12;
+    }
+    &__btn--search {
+        grid-column: 12;
+        grid-row: 2;
+    }
     &__button {
         background: $green;
         border-radius: 5px;
-        width: auto;
-        height: auto;
-        grid-column: 12;
-        grid-row: 1;
+        width: rem(80);
+        height: rem(40);
     }
-    &__search {
+    &__button--search {
         background: $white;
-        border-radius: 5px;
-        width: auto;
-        height: auto;
-        grid-column-start: 12;
-        grid-row-start: 2;
     }
     &__nav {
         grid-row: 2;
@@ -47,26 +49,32 @@
     text-decoration: none;
     border-bottom: 2px solid transparent;
     padding: rem(10) rem(0);
-    color: $green;
     font-weight: bold;
     list-style-type: none;
+    color: $greenblue;
+    font-size: $text-md;
     &__main {
         list-style-type: none;
-    }
-    
+    }   
     &__deroulant{
-        // display: none;
+        display: none;
         box-shadow: 0px 1px 2x #CCC;
         background-color: $white;
         position: absolute;
         width: 100%;
         z-index: 1000;
         list-style-type: none;
+        text-decoration: none;
     }
     &__menu{
         float: left;
         width: 25%;
         text-align: center;
         position: relative;
+        text-decoration: none;
+    }
+    &__lien {
+        color: $greenblue;
+        text-decoration: none;
     }
 }
