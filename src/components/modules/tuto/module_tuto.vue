@@ -32,12 +32,30 @@
     </div> -->
 
 <script>
-export default {
-    name: "tuto_single",
-    data() {
-        return {}
-    },
-}
+    import param from '@/param/param'
+    export default {
+        name: "Module_Tuto",
+        data() {
+            return {
+                tuto : {
+                    id: 0
+                }
+            }
+        },
+        created(){
+            this.tuto.id = this.$route.params.id;
+            console.log('id tuto', this.tuto.id);
+
+            axios({
+                method: 'get',
+                url : param.hostTuto + '/listeTutos/'+this.tuto.id,     
+            }).then(response=>{
+                this.tuto = response.data;
+                console.log('single tuto', this.tuto);
+            })
+            .catch(error => console.log('erreur tuto', error))
+        }
+    }
 </script>
 <style scoped>
 

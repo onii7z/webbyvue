@@ -5,7 +5,7 @@
             <h3>{{tuto.titre}}</h3>
             <h5>De : </h5> <p>PierpolJak</p>
             <h5>Note</h5> <p>5/5</p>
-            <router-link :to="{ name: 'module_tuto', params : {id : tuto.id}}">
+            <router-link :to="{ name: 'Module_Tuto', params : {id : tuto.id}}">
                 <button  type="submit" >Voir le tuto</button>
             </router-link>
         </div>
