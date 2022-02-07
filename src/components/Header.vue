@@ -42,14 +42,14 @@
           <router-link to="/tuto" class="nav__lien"> Tutos </router-link>
           <ul class="nav__deroulant">
             <li class="nav__ligne">Front</li>
-            <ul>
+            <ul class="nav__ssderoulant">
               <li class="nav__ligne"><router-link to="/" class="nav__lien"> HTML </router-link></li>
               <li class="nav__ligne"><router-link to="/" class="nav__lien"> CSS </router-link></li>
               <li class="nav__ligne"><router-link to="/" class="nav__lien"> Figma </router-link></li>
               <li class="nav__ligne"><router-link to="/" class="nav__lien"> Adobe XD </router-link></li>
             </ul>
             <li class="nav__ligne">Back</li>
-            <ul>
+            <ul class="nav__ssderoulant">
               <li class="nav__ligne"><router-link to="/" class="nav__lien"> CMS </router-link></li>
               <li class="nav__ligne"><router-link to="/" class="nav__lien"> PHP </router-link></li>
               <li class="nav__ligne"><router-link to="/" class="nav__lien"> MySQL </router-link></li>
