@@ -1,40 +1,36 @@
 <template>
     <div>
-        <!-- <div v-for="tuto in listeTuto" :key="tuto.id">
-            <img :src="tuto.image" alt="">
-            <h3>{{tuto.titre}}</h3>
-            <h5>De : </h5> <p>PierpolJak</p>
-            <h5>Note</h5> <p>5/5</p>
-            <router-link :to="{ name: 'Module_Tuto', params : {id : tuto.id}}">
-                <button  type="submit" >Voir le tuto</button>
-            </router-link>
-        </div> -->
-        test
+        <h3>{{lexique.nom}}</h3>
+        <p>{{lexique.desc}}</p>
+        <p>{{lexique.link}}</p>
     </div>
 </template>
 
 <script>
-  import param from '@/param/param'
-
+    import param from '@/param/param'
     export default {
         name: "Lexique",
         data() {
             return {
-                listeTuto : [],
+                lexique : {
+                    id: 0
+                }
             }
         },
-        // created() {
-        //     axios({
-        //         method: 'get',
-        //         url: param.hostTuto + '/listeTuto',
-        //     }).then(function(response) {
-        //         console.log('test tuto', response);
-        //         this.listeTuto = response.data;
-        //         console.log('liste tuto', this.listeTuto);
-        //     }.bind(this))
-        //     .catch(error => console.log(error))
-        // },
-    };
+        created(){
+            this.lexique.id = this.$route.params.id;
+            console.log('id tuto', this.lexique.id);
+            axios({
+                method: 'get',
+                url : param.hostTuto + '/listeLexique/'+this.lexique.id,     
+            }).then(response=>{
+                console.log('tt', response);
+                this.lexique = response.data;
+                console.log('single lexique', this.lexique);
+            })
+            .catch(error => console.log('erreur lexique', error))
+        }
+    }
 </script>
 
 <style scoped>

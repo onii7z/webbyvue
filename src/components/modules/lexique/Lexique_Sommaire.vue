@@ -1,12 +1,11 @@
 <template>
     <div>
         <div v-for="lexique in lexiques" :key="lexique.id">
-            <h3>{{lexique.title.rendered}}</h3>
+            <router-link :to="{ name: 'Lexique', params : {id : lexique.id}}">
+                <h3>{{lexique.title.rendered}}</h3>
+            </router-link>
             <p>{{lexique.acf.description}}</p>
             <p>{{lexique.acf.lien_source}}</p>
-            <!-- <router-link :to="{ name: 'Module_Tuto', params : {id : tuto.id}}">
-                <button  type="submit" >Voir le tuto</button>
-            </router-link> -->
         </div>
     </div>
 </template>
