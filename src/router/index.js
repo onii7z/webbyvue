@@ -10,6 +10,9 @@ import Liste_parcours from '@/components/modules/parcours/Liste_parcours'
 import Parcours from '@/components/modules/parcours/Parcours'
 import Presentation_parcours from '@/components/modules/parcours/Presentation_parcours'
 
+import Lexique from '@/components/modules/lexique/Lexique'
+import Lexique_Sommaire from '@/components/modules/lexique/Lexique_Sommaire'
+
 import Mentions from '@/components/pages/Mentions'
 import QuiSommes from '@/components/pages/QuiSommes'
 import Utilisation from '@/components/pages/Utilisation'
@@ -30,5 +33,8 @@ export default new Router({
     {path: '/presentation_parcours', name: 'Presentation_parcours', component: Presentation_parcours},
     {path: '/liste_parcours', name: 'Liste_Parcours', component: Liste_parcours},
     {path: '/parcours', name: 'Parcours', component: Parcours},
+    {path: '/lexique', name: 'Lexique', component: Lexique},
+    {path: '/lexique_sommaire', name: 'Lexique_Sommaire', component: Lexique_Sommaire},
+
   ]
 })
