@@ -4,8 +4,7 @@
             <router-link :to="{ name: 'Lexique', params : {id : lexique.id}}">
                 <h3>{{lexique.title.rendered}}</h3>
             </router-link>
-            <p>{{lexique.acf.description}}</p>
-            <p>{{lexique.acf.lien_source}}</p>
+        
         </div>
     </div>
 </template>
