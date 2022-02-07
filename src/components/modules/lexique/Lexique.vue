@@ -1,3 +1,38 @@
 <template>
-    <div>lexique single</div>
+    <div>
+        <h3>{{lexique.nom}}</h3>
+        <p>{{lexique.desc}}</p>
+        <p>{{lexique.link}}</p>
+    </div>
 </template>
+
+<script>
+    import param from '@/param/param'
+    export default {
+        name: "Lexique",
+        data() {
+            return {
+                lexique : {
+                    id: 0
+                }
+            }
+        },
+        created(){
+            this.lexique.id = this.$route.params.id;
+            console.log('id tuto', this.lexique.id);
+            axios({
+                method: 'get',
+                url : param.hostTuto + '/listeLexique/'+this.lexique.id,     
+            }).then(response=>{
+                console.log('tt', response);
+                this.lexique = response.data;
+                console.log('single lexique', this.lexique);
+            })
+            .catch(error => console.log('erreur lexique', error))
+        }
+    }
+</script>
+
+<style scoped>
+
+</style>
