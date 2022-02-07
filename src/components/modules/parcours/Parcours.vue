@@ -13,7 +13,7 @@
 <script>
     import param from '@/param/param'
     export default {
-        name: "Lexique",
+        name: "Parcours",
         data() {
             return {
                 parcours : {
