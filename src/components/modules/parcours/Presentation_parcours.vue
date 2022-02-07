@@ -10,7 +10,7 @@
                 <p>{{link.link_content}}</p>
             </div>
         </div>
-        <router-link to="/presentation_parcours" > je suis la </router-link>
+        <router-link to="/liste_parcours" > Liste des parcours </router-link>
     </div>
 </template>
 
