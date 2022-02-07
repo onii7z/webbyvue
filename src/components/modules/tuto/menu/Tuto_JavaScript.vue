@@ -25,7 +25,7 @@
         created(){
             axios({
                 method: 'get',
-                url : param.hostTuto + '/listeCategories/61',     
+                url : param.hostTuto + '/listeCategories/113',     
             }).then(response=>{
                 this.categories = response.data;
                 console.log('single categories', this.categories);
