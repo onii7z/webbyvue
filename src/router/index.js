@@ -5,11 +5,15 @@ import Acceuil from '@/components/Acceuil'
 import Tuto from '@/components/modules/tuto/Tuto'
 import Module_Tuto from '@/components/modules/tuto/Module_Tuto'
 import Module_Cat_Tuto from '@/components/modules/tuto/Module_Cat_Tuto'
+
+import Liste_parcours from '@/components/modules/parcours/Liste_parcours'
+import Parcours from '@/components/modules/parcours/Parcours'
+import Presentation_parcours from '@/components/modules/parcours/Presentation_parcours'
+
 import Mentions from '@/components/pages/Mentions'
 import QuiSommes from '@/components/pages/QuiSommes'
 import Utilisation from '@/components/pages/Utilisation'
 import Politique from '@/components/pages/Politique'
-import Presentation_parcours from '@/components/pages/Presentation_parcours'
 
 Vue.use(Router)
 
@@ -24,5 +28,7 @@ export default new Router({
     {path: '/utilisation', name: 'Utilisation', component: Utilisation},
     {path: '/politique', name: 'Politique', component: Politique},
     {path: '/presentation_parcours', name: 'Presentation_parcours', component: Presentation_parcours},
+    {path: '/liste_parcours', name: 'Liste_Parcours', component: Liste_parcours},
+    {path: '/parcours', name: 'Parcours', component: Parcours},
   ]
 })
