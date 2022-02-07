@@ -1,3 +1,157 @@
+@media (max-width: 1000px) {
+	* {
+		box-sizing: border-box;
+        
+	}
+	
+	/* passer body (et tous les éléments de largeur fixe) en largeur automatique */
+
+	body {
+		width: auto;
+		margin: 0;
+		padding: 0;
+	}
+	
+	/* fixer une largeur maximale de 100% aux éléments potentiellement problématiques */
+
+	img,
+	table,
+	td,
+	blockquote,
+	code,
+	pre,
+	textarea,
+	input,
+	iframe,
+	object,
+	embed,
+	video {
+		max-width: 100%;
+	}
+	
+	/* conserver le ratio des images */
+
+	img {
+		height: auto;
+	}
+	
+	/* gestion des mots longs */
+
+	textarea,
+	table,
+	td,
+	th,
+	code,
+	pre,
+	samp {
+		-webkit-hyphens: auto; /* césure propre */
+		-moz-hyphens: auto;
+		hyphens: auto;
+		word-wrap: break-word; /* passage à la ligne forcé */
+	}
+	
+	code,
+	pre,
+	samp {
+		white-space: pre-wrap; /* passage à la ligne spécifique pour les éléments à châsse fixe */
+	}
+	
+	/* Passer à une seule colonne (à appliquer aux éléments multi-colonnes) */
+
+	.element1,
+	.element2 {
+		float: none;
+		width: auto;
+	}
+	
+	/* masquer les éléments superflus */
+
+	.hide_mobile {
+		display: none !important;
+	}
+
+    .footer {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    grid-template-rows: 1fr auto;
+        background-color: $black;
+        color: $white;
+        bottom:0;
+        height: rem(120);  
+        width:100%;
+        padding-top: rem(20);
+        
+        &__titre {
+            font-size: $title-lg;
+            grid-column: 1 / span 1;
+            font-weight: 500;
+            
+        }
+        &__nav {
+            display: none;
+            list-style: none;
+            grid-column: 2 / span 1;
+            
+        }
+        &__link {
+            grid-column: 3;
+            align-self: start;
+            text-align: center;
+        }
+        &__lien {
+            text-decoration: none;
+            color: $white;
+            font-family: $font-titre;
+            margin-bottom: 20px;
+        }
+    }
+    .navi {
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        // padding: rem(10) rem(0);
+        font-weight: bold;
+        list-style-type: none;
+        &__main {
+            list-style-type: none;
+        }
+        &__deroulant{
+            // display: none;
+            box-shadow: 0px 1px 2x #CCC;
+            background-color: $white;
+            position: absolute;
+            width: 100%;
+            z-index: 1000;
+            list-style-type: none;
+        }
+        &__menu{
+            float: left;
+            width: 25%;
+            text-align: center;
+            position: relative;
+        }
+        &__lien {
+            text-decoration: underline;
+            color: $white;
+            text-align: center;
+            font-family: $font-titre;
+            font-weight: 400;
+            font-size: rem(24);
+        }
+    }
+
+
+
+
+
+
+}
+
+
+@media (min-width: 1000px) {
+	* {
+		box-sizing: border-box;
+	}
+
 .footer {
     background-color: $black;
     color: $white;
@@ -64,4 +218,5 @@
         font-weight: 400;
         font-size: rem(24);
     }
+}
 }

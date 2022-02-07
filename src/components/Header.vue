@@ -18,6 +18,14 @@
         <button  type="submit" class="header__button">Inscription</button>
       </router-link>
     </div>
+    <!-- Menu Burger -->
+    <div class="header__burger">
+      <svg width="38" height="37" viewBox="0 0 38 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="19" cy="18.5" rx="19" ry="18.5" fill="#585CA6"/>
+<path d="M28 24H10V22H28V24ZM28 19H10V17H28V19ZM28 14H10V12H28V14Z" fill="white"/>
+</svg>
+<!--  -->
+    </div>
     <!-- nav du header -->
     <nav class="header__nav nav">
       <ul class="nav__main">

@@ -1,3 +1,167 @@
+@media (max-width: 1000px) {
+	* {
+		box-sizing: border-box;
+        
+	}
+	
+	/* passer body (et tous les éléments de largeur fixe) en largeur automatique */
+
+	body {
+		width: auto;
+		margin: 0;
+		padding: 0;
+	}
+	
+	/* fixer une largeur maximale de 100% aux éléments potentiellement problématiques */
+
+	img,
+	table,
+	td,
+	blockquote,
+	code,
+	pre,
+	textarea,
+	input,
+	iframe,
+	object,
+	embed,
+	video {
+		max-width: 100%;
+	}
+	
+	/* conserver le ratio des images */
+
+	img {
+		height: auto;
+	}
+	
+	/* gestion des mots longs */
+
+	textarea,
+	table,
+	td,
+	th,
+	code,
+	pre,
+	samp {
+		-webkit-hyphens: auto; /* césure propre */
+		-moz-hyphens: auto;
+		hyphens: auto;
+		word-wrap: break-word; /* passage à la ligne forcé */
+	}
+	
+	code,
+	pre,
+	samp {
+		white-space: pre-wrap; /* passage à la ligne spécifique pour les éléments à châsse fixe */
+	}
+	
+	/* Passer à une seule colonne (à appliquer aux éléments multi-colonnes) */
+
+	.element1,
+	.element2 {
+		float: none;
+		width: auto;
+	}
+	
+	/* masquer les éléments superflus */
+
+	.hide_mobile {
+		display: none !important;
+	}
+.header__button{
+    display: none;
+}
+
+.header__nav {
+    display: none;
+}
+
+.header{
+    display : grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 1fr auto;
+    border-bottom: solid 2px;
+    border-bottom-color: $greenblue;
+    padding: 0 20px 0 20px;
+    margin-bottom: 20px;
+    &__logo {
+        width: 100px;
+        height: 100px;
+        align-self: center;
+        grid-row: 1 /span 2;
+    }
+    &__titre {
+        font-family: $font-titre;
+        font-size: rem(40);
+        /* Degrader de la couleur du texte (se trouve aussi dans nav a)*/ 
+        background:-webkit-linear-gradient(right, $skyblue 30%, $green 76%);
+        background-clip:text;
+        -webkit-background-clip:text;
+        color:transparent;
+        grid-column: 2 / span 1;
+        align-self: center;
+    }
+    &__btn {
+        grid-column: 3;
+        align-self: center;
+    }
+    &__button {
+        margin-bottom: rem(5);
+        color: $white;
+        border: none;
+        box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
+        background: $green;
+        border-radius: 5px;
+        width: rem(40);
+        height: rem(40);
+        
+    
+    }
+    &__burger{
+        grid-column: 3 /span 1;
+        grid-row: 1;
+        align-self: center;
+        justify-self: center;
+
+    }
+    &__button--search {
+        
+        align-self: center;
+        grid-column: 3 ;
+        display: initial;
+        margin: 0;
+        background: rgb(27,136,76);
+        background: linear-gradient(180deg, rgba(27,136,76,1) 0%, rgba(27,136,76,1) 0%, rgba(0,212,255,1) 100%);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+@media (min-width: 1000px) {
+	* {
+		box-sizing: border-box;
+	}
+
+
+
+
 .header {
     height: rem(230);
     border-bottom: solid 2px;
@@ -27,6 +191,9 @@
     &__btn--search {
         grid-column: 12;
         grid-row: 2;
+    }
+    &__burger {
+        display: none;
     }
     &__button {
         margin-bottom: rem(5);
@@ -129,4 +296,5 @@
         font-family: $font-titre;
 
     }
+}
 }
