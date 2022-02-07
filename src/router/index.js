@@ -4,7 +4,7 @@ import Acceuil from '@/components/Acceuil'
 
 import Tuto from '@/components/modules/tuto/Tuto'
 import Module_Tuto from '@/components/modules/tuto/Module_Tuto'
-import Module_Cat_Tuto from '@/components/modules/tuto/Module_Cat_Tuto'
+import Tuto_Html from '@/components/modules/tuto/menu/Tuto_Html'
 
 import Liste_parcours from '@/components/modules/parcours/Liste_parcours'
 import Parcours from '@/components/modules/parcours/Parcours'
@@ -25,7 +25,7 @@ export default new Router({
     {path: '/', name: 'Acceuil', component: Acceuil},
     {path: '/tuto', name: 'Tuto', component: Tuto},
     {path: '/module_tuto', name: 'Module_Tuto', component: Module_Tuto},
-    {path: '/module_cat_tuto', name: 'Module_Cat_Tuto', component: Module_Cat_Tuto},
+    {path: '/tuto_html', name: 'Tuto_Html', component: Tuto_Html},
     {path: '/mentions', name: 'Mentions', component: Mentions},
     {path: '/quisommes', name: 'QuiSommes', component: QuiSommes},
     {path: '/utilisation', name: 'Utilisation', component: Utilisation},
