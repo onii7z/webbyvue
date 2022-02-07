@@ -78,6 +78,7 @@
         z-index: 1000;
         list-style-type: none;
         text-decoration: none;
+        border-radius: 0 0 10px 10px;
     }
     &__ssderoulant{
         list-style-type: none;
@@ -88,7 +89,12 @@
     }
    &__ligne{
     text-decoration: none;
+    margin-top: 20px;
 
+   }
+   &__ligne--titre{
+       text-decoration: underline;
+       font-size: $text-xl;
    }
     &__menu{
         float: left;

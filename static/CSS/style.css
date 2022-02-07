@@ -136,6 +136,7 @@ img {
   z-index: 1000;
   list-style-type: none;
   text-decoration: none;
+  border-radius: 0 0 10px 10px;
 }
 
 .nav__ssderoulant {
@@ -148,6 +149,12 @@ img {
 
 .nav__ligne {
   text-decoration: none;
+  margin-top: 20px;
+}
+
+.nav__ligne--titre {
+  text-decoration: underline;
+  font-size: 1.375rem;
 }
 
 .nav__menu {
