@@ -22,7 +22,7 @@
     <nav class="header__nav nav">
       <ul class="nav__main">
         <li class="nav__menu">
-          <router-link to="/" class="nav__lien nav__lien--titles"> Acceuil </router-link>
+          <router-link to="/" class="nav__lien nav__lien--titles"> Accueil </router-link>
         </li>
         <li class="nav__menu">
           <p class="nav__lien nav__lien--titles"> A propos </p>
