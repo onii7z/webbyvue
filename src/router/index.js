@@ -4,7 +4,14 @@ import Acceuil from '@/components/Acceuil'
 
 import Tuto from '@/components/modules/tuto/Tuto'
 import Module_Tuto from '@/components/modules/tuto/Module_Tuto'
-import Module_Cat_Tuto from '@/components/modules/tuto/Module_Cat_Tuto'
+
+import Tuto_Html from '@/components/modules/tuto/menu/Tuto_Html'
+import Tuto_Adobe from '@/components/modules/tuto/menu/Tuto_Adobe'
+import Tuto_Cms from '@/components/modules/tuto/menu/Tuto_Cms'
+import Tuto_Css from '@/components/modules/tuto/menu/Tuto_Css'
+import Tuto_Figma from '@/components/modules/tuto/menu/Tuto_Figma'
+import Tuto_Php from '@/components/modules/tuto/menu/Tuto_Php'
+import Tuto_Sql from '@/components/modules/tuto/menu/Tuto_Sql'
 
 import Liste_parcours from '@/components/modules/parcours/Liste_parcours'
 import Parcours from '@/components/modules/parcours/Parcours'
@@ -25,7 +32,13 @@ export default new Router({
     {path: '/', name: 'Acceuil', component: Acceuil},
     {path: '/tuto', name: 'Tuto', component: Tuto},
     {path: '/module_tuto', name: 'Module_Tuto', component: Module_Tuto},
-    {path: '/module_cat_tuto', name: 'Module_Cat_Tuto', component: Module_Cat_Tuto},
+    {path: '/tuto_html', name: 'Tuto_Html', component: Tuto_Html},
+    {path: '/tuto_adobe', name: 'Tuto_Adobe', component: Tuto_Adobe},
+    {path: '/tuto_cms', name: 'Tuto_Cms', component: Tuto_Cms},
+    {path: '/tuto_css', name: 'Tuto_Css', component: Tuto_Css},
+    {path: '/tuto_figma', name: 'Tuto_Figma', component: Tuto_Figma},
+    {path: '/tuto_php', name: 'Tuto_Php', component: Tuto_Php},
+    {path: '/tuto_sql', name: 'Tuto_Sql', component: Tuto_Sql},
     {path: '/mentions', name: 'Mentions', component: Mentions},
     {path: '/quisommes', name: 'QuiSommes', component: QuiSommes},
     {path: '/utilisation', name: 'Utilisation', component: Utilisation},

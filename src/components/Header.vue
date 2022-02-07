@@ -51,16 +51,16 @@
           <ul class="nav__deroulant">
             <li class="nav__ligne nav__ligne--titre">Front</li>
             <ul class="nav__ssderoulant">
-              <li class="nav__ligne"><router-link to="/" class="nav__lien"> HTML </router-link></li>
-              <li class="nav__ligne"><router-link to="/" class="nav__lien"> CSS </router-link></li>
-              <li class="nav__ligne"><router-link to="/" class="nav__lien"> Figma </router-link></li>
-              <li class="nav__ligne"><router-link to="/" class="nav__lien"> Adobe XD </router-link></li>
+              <li class="nav__ligne"><router-link to="/tuto_html" class="nav__lien"> HTML </router-link></li>
+              <li class="nav__ligne"><router-link to="/tuto_css" class="nav__lien"> CSS </router-link></li>
+              <li class="nav__ligne"><router-link to="/tuto_figma" class="nav__lien"> Figma </router-link></li>
+              <li class="nav__ligne"><router-link to="/tuto_adobe" class="nav__lien"> Adobe XD </router-link></li>
             </ul>
             <li class="nav__ligne nav__ligne--titre">Back</li>
             <ul class="nav__ssderoulant">
-              <li class="nav__ligne"><router-link to="/" class="nav__lien"> CMS </router-link></li>
-              <li class="nav__ligne"><router-link to="/" class="nav__lien"> PHP </router-link></li>
-              <li class="nav__ligne"><router-link to="/" class="nav__lien"> MySQL </router-link></li>
+              <li class="nav__ligne"><router-link to="/tuto_cms" class="nav__lien"> CMS </router-link></li>
+              <li class="nav__ligne"><router-link to="/tuto_php" class="nav__lien"> PHP </router-link></li>
+              <li class="nav__ligne"><router-link to="/tuto_sql" class="nav__lien"> MySQL </router-link></li>
             </ul>
           </ul>
         </li>
