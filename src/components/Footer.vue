@@ -4,7 +4,7 @@
     <nav class="footer__nav navi">
       <ul class="navi__main">
         <li class="navi__menu">
-          <router-link to="/" class="navi__lien"> Acceuil </router-link>
+          <router-link to="/" class="navi__lien"> Accueil </router-link>
         </li>
         <li class="navi__menu">
           <router-link to="/quisommes" class="navi__lien"> A propos </router-link>
@@ -19,7 +19,9 @@
     </nav>
     <div class="footer__link">
       <router-link to="/mentions" class="footer__lien"> Mentions légales </router-link>
+      <br>
       <router-link to="/politique" class="footer__lien"> Politique de confidentialité </router-link>
+      <br>
       <router-link to="/utilisation" class="footer__lien"> Conditions d'utilisation </router-link>
     </div>
   </footer>
