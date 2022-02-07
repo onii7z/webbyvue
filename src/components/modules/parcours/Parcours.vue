@@ -18,6 +18,7 @@
         created(){
             this.parcours.id = this.$route.params.id;
             console.log('id tuto', this.parcours.id);
+            // test
             axios({
                 method: 'get',
                 url : param.hostTuto + '/listeParcours/'+this.parcours.id,     
