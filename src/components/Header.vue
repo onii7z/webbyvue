@@ -32,7 +32,7 @@
           </ul>
         </li>
         <li class="nav__menu">
-          <router-link to="/presentation_parcours" class="nav__lien"> Parcours </router-link>
+          <router-link to="/" class="nav__lien"> Parcours </router-link>
           <ul class="nav__deroulant">
             <li class="nav__ligne"><router-link to="/" class="nav__lien"> Liste des parcours </router-link></li> 
             <li class="nav__ligne"><router-link to="/" class="nav__lien"> Lexique </router-link></li> 
@@ -41,15 +41,15 @@
         <li class="nav__menu">
           <router-link to="/tuto" class="nav__lien"> Tutos </router-link>
           <ul class="nav__deroulant">
-            <p class="nav__ligne">Front</p>
-            <ul class="nav__deroulant">
+            <li class="nav__ligne">Front</li>
+            <ul>
               <li class="nav__ligne"><router-link to="/" class="nav__lien"> HTML </router-link></li>
               <li class="nav__ligne"><router-link to="/" class="nav__lien"> CSS </router-link></li>
               <li class="nav__ligne"><router-link to="/" class="nav__lien"> Figma </router-link></li>
               <li class="nav__ligne"><router-link to="/" class="nav__lien"> Adobe XD </router-link></li>
             </ul>
-            <p class="nav__ligne">Back</p>
-            <ul class="nav__deroulant">
+            <li class="nav__ligne">Back</li>
+            <ul>
               <li class="nav__ligne"><router-link to="/" class="nav__lien"> CMS </router-link></li>
               <li class="nav__ligne"><router-link to="/" class="nav__lien"> PHP </router-link></li>
               <li class="nav__ligne"><router-link to="/" class="nav__lien"> MySQL </router-link></li>

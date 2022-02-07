@@ -37,8 +37,8 @@ img {
   height: 14.375rem;
   border-bottom: solid 2px;
   border-bottom-color: #03A696;
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
+  -ms-grid-rows: 2fr 0.2fr;
+      grid-template-rows: 2fr 0.2fr;
   padding-top: 1.875rem;
 }
 
@@ -51,7 +51,7 @@ img {
   font-family: "Odibee Sans", cursive;
   font-size: 5rem;
   /* Degrader de la couleur du texte (se trouve aussi dans nav a)*/
-  background: -webkit-linear-gradient(right, #1DD0D7 30%, #1B884C 76%);
+  background: -webkit-linear-gradient(right, #1DD0D7 30%, #03A696 76%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -73,14 +73,22 @@ img {
 }
 
 .header__button {
-  background: #1B884C;
+  margin-bottom: 0.3125rem;
+  color: #FFFFFF;
+  border: none;
+  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+  background: #03A696;
   border-radius: 5px;
   width: 5rem;
   height: 2.5rem;
 }
 
 .header__button--search {
-  background: #FFFFFF;
+  margin: 0;
+  background: #1b884c;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1b884c), color-stop(0%, #1b884c), to(#00d4ff));
+  background: linear-gradient(180deg, #1b884c 0%, #1b884c 0%, #00d4ff 100%);
 }
 
 .header__nav {
@@ -90,18 +98,24 @@ img {
   -ms-grid-column-span: 4;
   grid-column: 8 / span 4;
   width: 100%;
+  padding: 0;
   margin: 0 auto;
   background-color: #FFFFFF;
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .nav {
   display: block;
   text-decoration: none;
   border-bottom: 2px solid transparent;
-  padding: 0.625rem 0rem;
+  padding: 0rem 0rem;
   font-weight: bold;
   list-style-type: none;
   color: #03A696;
@@ -121,6 +135,14 @@ img {
   width: 100%;
   z-index: 1000;
   list-style-type: none;
+  text-decoration: none;
+}
+
+.nav__menu:hover .nav__deroulant {
+  display: block;
+}
+
+.nav__ligne {
   text-decoration: none;
 }
 
