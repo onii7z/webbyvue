@@ -3,10 +3,11 @@
     border-bottom: solid 2px;
     border-bottom-color: $greenblue;
     grid-template-rows: (2fr 0.2fr);
-    padding-top: rem(30);
+    padding-top: 0;
     &__logo {
         width: 100px;
         height: 100px;
+        align-self: center;
     }
     &__titre {
         font-family: $font-titre;
@@ -17,9 +18,11 @@
         -webkit-background-clip:text;
         color:transparent;
         grid-column: 3 / span 5;
+        align-self: center;
     }
     &__btn {
         grid-column: 12;
+        align-self: center;
     }
     &__btn--search {
         grid-column: 12;
@@ -34,6 +37,7 @@
         border-radius: 5px;
         width: rem(80);
         height: rem(40);
+        
         
     }
     &__button--search {
@@ -50,7 +54,7 @@
         background-color: $white;
         position: sticky;
         top: 0px;
-        align-self: center;
+        align-self: end;
         justify-self: center;
     }
 }
@@ -71,7 +75,7 @@
     }   
     &__deroulant{
         display: none;
-        box-shadow: 0px 1px 2x #CCC;
+        box-shadow: 7px 7px 8px rgba(0,0,0,0.25);
         background-color: $white;
         position: absolute;
         width: 100%;
@@ -79,9 +83,12 @@
         list-style-type: none;
         text-decoration: none;
         border-radius: 0 0 10px 10px;
+        font-family: $font-titre;
+        
     }
     &__ssderoulant{
         list-style-type: none;
+
     }
     &__menu:hover .nav__deroulant{
         display: block;
@@ -89,12 +96,17 @@
     }
    &__ligne{
     text-decoration: none;
-    margin-top: 20px;
+    font-family: $font-titre;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-size: $text-md;
+    font-weight: 400;
 
    }
    &__ligne--titre{
        text-decoration: underline;
        font-size: $text-xl;
+       font-family: $font-titre;
    }
     &__menu{
         float: left;
@@ -106,5 +118,15 @@
     &__lien {
         color: $greenblue;
         text-decoration: none;
+        font-weight: 400;
+        font-family: $font-titre;
+        font-size: $text-md;
+       
+    }
+    &__lien--titles{
+        font-size: rem(25);
+        font-weight: 400;
+        font-family: $font-titre;
+
     }
 }

@@ -22,24 +22,24 @@
     <nav class="header__nav nav">
       <ul class="nav__main">
         <li class="nav__menu">
-          <router-link to="/" class="nav__lien"> Acceuil </router-link>
+          <router-link to="/" class="nav__lien nav__lien--titles"> Acceuil </router-link>
         </li>
         <li class="nav__menu">
-          <p class="nav__lien"> A propos </p>
+          <p class="nav__lien nav__lien--titles"> A propos </p>
           <ul class="nav__deroulant">
             <li class="nav__ligne"><router-link to="/quisommes" class="nav__lien"> Qui sommes-nous ? </router-link></li>
             <li class="nav__ligne"><router-link to="/" class="nav__lien"> Nous contacter </router-link></li>
           </ul>
         </li>
         <li class="nav__menu">
-          <router-link to="/presentation_parcours" class="nav__lien"> Parcours </router-link>
+          <router-link to="/presentation_parcours" class="nav__lien nav__lien--titles"> Parcours </router-link>
           <ul class="nav__deroulant">
             <li class="nav__ligne"><router-link to="/liste_parcours" class="nav__lien"> Liste des parcours </router-link></li> 
             <li class="nav__ligne"><router-link to="/lexique_sommaire" class="nav__lien"> Lexique </router-link></li> 
           </ul>
         </li>
         <li class="nav__menu">
-          <router-link to="/tuto" class="nav__lien"> Tutos </router-link>
+          <router-link to="/tuto" class="nav__lien nav__lien--titles"> Tutos </router-link>
           <ul class="nav__deroulant">
             <li class="nav__ligne nav__ligne--titre">Front</li>
             <ul class="nav__ssderoulant">
