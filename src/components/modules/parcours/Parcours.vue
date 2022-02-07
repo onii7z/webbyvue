@@ -1,6 +1,12 @@
 <template>
     <div>
-       test
+       <h3>{{parcours.nom}}</h3>
+       <div v-for="parcour in parcours" :key="parcour.id">
+            <h4>{{parcour.titre}}</h4>
+            <p>{{parcour.resume}}</p>
+            <img :src="parcour.image" alt="">
+            <p>{{parcour.lien}}</p>
+       </div>
     </div>
 </template>
 
