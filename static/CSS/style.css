@@ -138,6 +138,10 @@ img {
   text-decoration: none;
 }
 
+.nav__ssderoulant {
+  list-style-type: none;
+}
+
 .nav__menu:hover .nav__deroulant {
   display: block;
 }
