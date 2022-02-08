@@ -1,9 +1,6 @@
 <template>
   <footer class="footer grid">
-    <h2 class="footer__titre" v-for="option in liste" :key="option.id"
-    >
-      {{option.acf.titre_du_site}} {{option.acf.slogan_du_site}}
-    </h2>
+    <h2 class="footer__titre">{{ liste.title }} {{ liste.description }}</h2>
     <nav class="footer__nav navi">
       <ul class="navi__main">
         <li class="navi__menu">
@@ -41,16 +38,37 @@ export default {
     };
   },
   created() {
-            axios({
-                method: 'get',
-                url: param.host + 'option',
-            }).then(function(response) {
-                console.log('Response :', response);
-                this.liste = response.data;
-                console.log('Liste Options', this.liste);
-            }.bind(this))
-            .catch(error => console.log(error))
-        },
+    axios({
+      method: "post",
+      url: param.auth,
+      data: {
+        username: param.user,
+        password: param.psw,
+      },
+    })
+      .then(
+        function (response) {
+          // console.log("Reponse token", response);
+
+          let token = response.data.token;
+          // console.log("Token", token)
+
+          let headers = { Authorization: "Bearer " + token };
+          axios({
+            method: "get",
+            url: param.host + "settings",
+            headers: headers,
+          }).then(
+            function (response) {
+              // console.log('test', response);
+              this.liste = response.data;
+              // console.log('liste', this.liste);
+            }.bind(this)
+          );
+        }.bind(this)
+      )
+      .catch((error) => console.log(error));
+  },
 };
 </script>
 
