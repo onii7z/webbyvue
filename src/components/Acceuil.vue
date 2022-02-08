@@ -82,7 +82,8 @@
                 return 0;
             }
             return this.listeTuto.sort(compare);
-        },       
+        },
+               
       },
       created() {
           axios({
