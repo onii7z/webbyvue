@@ -205,16 +205,10 @@
 .burg{
     display : grid;
     grid-template-columns: repeat(3, 1fr);
-    // gap : 20px;
     padding-left : 20px;
     padding-right : 20px;
     grid-template-rows: 120px, 150px, 100px;
-    &img{
-        // grid-column: 1/ span (3);
-        // grid-row: 1/ span (1);
-        // padding : 20px;
-
-    }
+    
     &__close {
 
         color: white;
@@ -275,8 +269,12 @@
 	* {
 		box-sizing: border-box;
 	}
-
-
+.burg{
+    display: none;
+}
+.headerform{
+    display: none;
+}
 
 
 .header {

@@ -32,10 +32,10 @@
             <!-- <img class="navimg" src="src/assets/img/free_logo_2022.png" alt="Logo FreeMusic"> -->
             <ul class="burglist">
                 <li class="burgitem"><a class="burglink" href="#">Connexion</a></li>
-                <li class="burgitem"><a class="burglink" href="#">Accueil</a></li>
+                <li class="burgitem"><router-link to="/" class="burglink" href="#" >Accueil</router-link></li>
                 <li class="burgitem"><a class="burglink" href="#">A propos</a></li>
-                <li class="burgitem"><a class="burglink" href="#">Parcours</a></li>
-                <li class="burgitem"><a class="burglink" href="#">Tutos</a></li>
+                <li class="burgitem"><router-link to="/presentation_parcours" class="burglink" href="#">Parcours</router-link></li>
+                <li class="burgitem"><router-link to="/tuto" class="burglink" href="#">Tutos</router-link></li>
 
             </ul>
             <a href="#" class="burg__close"><svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">

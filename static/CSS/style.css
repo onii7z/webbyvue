@@ -307,6 +307,12 @@ img {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
+  .burg {
+    display: none;
+  }
+  .headerform {
+    display: none;
+  }
   .header {
     height: 14.375rem;
     border-bottom: solid 2px;
