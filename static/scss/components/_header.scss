@@ -119,12 +119,18 @@
         
     
     }
-    &__burger{
+    // &__burger{
+    //     grid-column: 3 /span 1;
+    //     grid-row: 1;
+    //     align-self: center;
+    //     justify-self: center;
+
+    // }
+    &form{
         grid-column: 3 /span 1;
         grid-row: 1;
         align-self: center;
         justify-self: center;
-
     }
     &__button--search {
         
@@ -166,8 +172,8 @@
 
 
 .menuBurger {
-    position: relative;
-    width: 30px;
+    grid-column: 3 /span 1;
+    grid-row: 1;
     cursor: pointer;
     background: none;
     border: none;
@@ -198,43 +204,47 @@
 
 .burg{
     display : grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap : 20px;
+    grid-template-columns: repeat(3, 1fr);
+    // gap : 20px;
     padding-left : 20px;
     padding-right : 20px;
     grid-template-rows: 120px, 150px, 100px;
     &img{
-        grid-column: 1/ span (3);
-        grid-row: 1/ span (1);
-        padding : 20px;
+        // grid-column: 1/ span (3);
+        // grid-row: 1/ span (1);
+        // padding : 20px;
 
     }
-    &close {
-        top: 10px;
-        right: 10px;
-        margin-top : 10px;
-        color: black;
+    &__close {
+
+        color: white;
         text-decoration: none;
-        grid-column: 4 / span (1);
-        justify-self: right;
+        grid-column: 3 / span (1);
+        justify-self: end;
+        align-self: center;
     }
     &link {
         color : $gold;
         text-decoration: none;
-        grid-column: 1 / span (4);
+        grid-column: 2 /span 1;
+        padding: 0px;
+        font-family: $font-titre;
+        font-size: rem(40);
         }
     &list {
-        text-align : right;
+        text-align : center;
         list-style: none;
-        padding: 0;
+        padding: 0px;
         margin: 0;
-        grid-row: 2 /span (1);
-        grid-column: 1 / span (4);
-        text-transform: uppercase;
-        font : {
-            size : $text-xl;
-            family : 'Alatsi';
-        }
+        grid-row: 1 /span 3;
+        grid-column: 2 /span 1;
+        align-self: center;
+
+    }
+    &item{ 
+      padding-top: 40px;
+      padding-bottom: 40px;
+
     }
     &icon {
         grid-row: 3/ span (1);

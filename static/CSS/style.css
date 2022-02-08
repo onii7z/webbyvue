@@ -158,7 +158,7 @@ img {
     width: 2.5rem;
     height: 2.5rem;
   }
-  .header__burger {
+  .headerform {
     -ms-grid-column: 3;
     -ms-grid-column-span: 1;
     grid-column: 3 /span 1;
@@ -208,8 +208,11 @@ img {
     opacity: 1;
   }
   .menuBurger {
-    position: relative;
-    width: 30px;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3 /span 1;
+    -ms-grid-row: 1;
+    grid-row: 1;
     cursor: pointer;
     background: none;
     border: none;
@@ -244,56 +247,53 @@ img {
   .burg {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
     padding-left: 20px;
     padding-right: 20px;
     -ms-grid-rows: 120px, 150px, 100px;
         grid-template-rows: 120px, 150px, 100px;
   }
-  .burgimg {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-column: 1/span 3;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1/span 1;
-    padding: 20px;
-  }
-  .burgclose {
-    top: 10px;
-    right: 10px;
-    margin-top: 10px;
-    color: black;
+  .burg__close {
+    color: white;
     text-decoration: none;
-    -ms-grid-column: 4;
+    -ms-grid-column: 3;
     -ms-grid-column-span: 1;
-    grid-column: 4/span 1;
-    -ms-grid-column-align: right;
-        justify-self: right;
+    grid-column: 3/span 1;
+    -ms-grid-column-align: end;
+        justify-self: end;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   .burglink {
     color: #FFDF67;
     text-decoration: none;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 4;
-    grid-column: 1/span 4;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 /span 1;
+    padding: 0px;
+    font-family: "Odibee Sans", cursive;
+    font-size: 2.5rem;
   }
   .burglist {
-    text-align: right;
+    text-align: center;
     list-style: none;
-    padding: 0;
+    padding: 0px;
     margin: 0;
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
-    grid-row: 2/span 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 4;
-    grid-column: 1/span 4;
-    text-transform: uppercase;
-    font-size: 1.375rem;
-    font-family: 'Alatsi';
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1 /span 3;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 /span 1;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .burgitem {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
   .burgicon {
     -ms-grid-row: 3;
