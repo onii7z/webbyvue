@@ -24,8 +24,32 @@
 <ellipse cx="19" cy="18.5" rx="19" ry="18.5" fill="#585CA6"/>
 <path d="M28 24H10V22H28V24ZM28 19H10V17H28V19ZM28 14H10V12H28V14Z" fill="white"/>
 </svg>
-<!--  -->
     </div>
+    <!--  -->
+    <!-- Nav Burger -->
+    <div class="headermenu menu" :class="menuIsOpen && 'menu--open'" id="modal">
+        <nav class="headermenu burg" >
+            <!-- <img class="navimg" src="src/assets/img/free_logo_2022.png" alt="Logo FreeMusic"> -->
+            <ul class="burglist">
+                <li class="burgitem"><a class="burglink" href="#">Accueil</a></li>
+                <li class="burgitem"><a class="burglink" href="#">A propos</a></li>
+                <li class="burgitem"><a class="burglink" href="#">Parcours</a></li>
+                <li class="burgitem"><a class="burglink" href="#">Tutos</a></li>
+
+            </ul>
+            <a href="#" class="burg__close">&times;</a>
+        </nav>
+    </div>
+    <div class="headerform">
+            <form class="headerform" action="#modal">
+            <button class="headerbtn menuBurger" 
+                @pointerdown="menuIsOpen = !menuIsOpen" 
+                :class="menuIsOpen && 'menuBurger--open'">
+                    <span class="menuBurgerbar"></span>
+                    <span class="menuBurgerbar"></span></button>
+
+            </form>
+        </div>
     <!-- nav du header -->
     <nav class="header__nav nav">
       <ul class="nav__main">
