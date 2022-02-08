@@ -22,7 +22,10 @@
             </p>
             <h5>Note</h5>
             <img :src="tutos.image" alt="">
-            <h3>Commentaires : </h3><p></p>
+            <h3>Commentaires : </h3>
+            <p v-for="com in tutos.comments" :key="com.id">
+                {{com.comment_content}}
+            </p>
         </div>
     </div>
 </template>
