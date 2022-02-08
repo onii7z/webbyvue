@@ -21,6 +21,7 @@
                 {{lang.nom}}
             </p>
             <h5>Note</h5>
+            <p>{{tutos.note}}/5</p>
             <img :src="tutos.image" alt="">
             <h3>Commentaires : </h3>
             <p v-for="com in tutos.comments" :key="com.id">
