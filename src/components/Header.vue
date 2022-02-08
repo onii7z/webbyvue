@@ -47,7 +47,6 @@
                 :class="menuIsOpen && 'menuBurger--open'">
                     <span class="menuBurgerbar"></span>
                     <span class="menuBurgerbar"></span></button>
-
             </form>
         </div>
     <!-- nav du header -->
