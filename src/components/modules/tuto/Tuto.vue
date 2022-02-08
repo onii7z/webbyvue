@@ -3,8 +3,7 @@
         <div v-for="tuto in listeTuto" :key="tuto.id">
             <img :src="tuto.image" alt="">
             <h3>{{tuto.titre}}</h3>
-            <h5>De : </h5> <p>PierpolJak</p>
-            <h5>Note</h5> <p>5/5</p>
+            <h5>Note</h5> <p>{{tuto.note}}/5</p>
             <router-link :to="{ name: 'Module_Tuto', params : {id : tuto.id}}">
                 <button  type="submit" >Voir le tuto</button>
             </router-link>

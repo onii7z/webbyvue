@@ -5,12 +5,29 @@
         <!-- fin du slider -->
 
         <!-- liste des tutos -->
-        <p>Tuto du mois</p>
-        <p>vide</p>
+        <p>Best tuto</p>
+        <p > {{listeOrderByNote[0].titre}}</p>
+        <img :src="listeOrderByNote[0].image" alt="">
+        <h5>Note</h5> : <p>{{listeOrderByNote[0].note}}/5</p>
+        <router-link :to="{ name: 'Module_Tuto', params : {id : listeOrderByNote[0].id}}">
+          <button  type="submit" >Voir le tuto</button>
+        </router-link>
+
         <p>Dernier Tuto</p>
-        <p>vide</p>
+        <p > {{listeOrderByDate[0].titre}}</p>
+        <img :src="listeOrderByDate[0].image" alt="">
+        <h5>Note</h5> : <p>{{listeOrderByDate[0].note}}/5</p>
+        <router-link :to="{ name: 'Module_Tuto', params : {id : listeOrderByDate[0].id}}">
+          <button  type="submit" >Voir le tuto</button>
+        </router-link>
+
         <p>Tuto Aléatoire</p>
-        <p>vide</p>
+        <p > {{listeOrderByDate[0].titre}}</p>
+        <img :src="listeOrderByDate[0].image" alt="">
+        <h5>Note</h5> : <p>{{listeOrderByDate[0].note}}/5</p>
+        <router-link :to="{ name: 'Module_Tuto', params : {id : listeOrderByDate[0].id}}">
+          <button  type="submit" >Voir le tuto</button>
+        </router-link>
         <!-- fin tuto -->
 
         <section>
@@ -43,24 +60,42 @@
   import param from '@/param/param'
 
     export default {
-        name: "Tuto",
-        data() {
-            return {
-                listeTuto : [],
+      name: "Acceuil",
+      data() {
+          return {
+              listeTuto : [],
+          }
+      },
+      computed:{
+        listeOrderByNote:function(){
+            function compare(a,b) {
+                if (a.note < b.note) return 1;
+                if (a.note > b.note) return -1;
+                return 0;
             }
+            return this.listeTuto.sort(compare);
         },
-        created() {
-            axios({
-                method: 'get',
-                url: param.hostTuto + '/listeTuto',
-            }).then(function(response) {
-                console.log('test tuto', response);
-                this.listeTuto = response.data;
-                console.log('liste tuto', this.listeTuto);
-            }.bind(this))
-            .catch(error => console.log(error))
-        },
-    };
+        listeOrderByDate:function(){
+            function compare(a,b) {
+                if (a.date < b.date) return 1;
+                if (a.date > b.date) return -1;
+                return 0;
+            }
+            return this.listeTuto.sort(compare);
+        },       
+      },
+      created() {
+          axios({
+              method: 'get',
+              url: param.hostTuto + '/listeTuto',
+          }).then(function(response) {
+              console.log('test tuto', response);
+              this.listeTuto = response.data;
+              console.log('liste tuto', this.listeTuto);
+          }.bind(this))
+          .catch(error => console.log(error))
+      },
+  };
 </script>
 
 <style scoped>
