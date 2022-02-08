@@ -16,9 +16,9 @@
       <router-link to="/">
         <button  type="submit" class="header__button">Connexion</button>
       </router-link>
-      <router-link to="/" >
+      <a href="https://webby.houlle.org/wp-login.php?action=register">
         <button  type="submit" class="header__button">Inscription</button>
-      </router-link>
+      </a>
     </div>
     <!-- Menu Burger -->
     <div class="header__burger">
