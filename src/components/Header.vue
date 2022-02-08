@@ -60,7 +60,7 @@
           <p class="nav__lien nav__lien--titles"> A propos </p>
           <ul class="nav__deroulant">
             <li class="nav__ligne"><router-link to="/quisommes" class="nav__lien"> Qui sommes-nous ? </router-link></li>
-            <li class="nav__ligne"><router-link to="/" class="nav__lien"> Nous contacter </router-link></li>
+            <li class="nav__ligne"><router-link to="/contact" class="nav__lien"> Nous contacter </router-link></li>
           </ul>
         </li>
         <li class="nav__menu">
@@ -90,7 +90,7 @@
         </li>
       </ul>
     </nav>
-    <router-link to="/tuto" class="header__btn header__btn--search">
+    <router-link to="/search" class="header__btn header__btn--search">
       <button  type="search" class="header__button header__button--search"><svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0005 9.30313C25.0005 4.16406 21.0549 0 16.1902 0C11.3211 0 7.37695 4.16406 7.37695 9.30313C7.37695 14.4391 11.3225 18.6031 16.1902 18.6031C21.0549 18.6031 25.0005 14.4391 25.0005 9.30313ZM8.72695 9.40469C8.72811 8.36138 8.92276 7.32855 9.29978 6.36521C9.6768 5.40187 10.2288 4.52692 10.9242 3.79035C11.6196 3.05378 12.4449 2.47004 13.3527 2.0725C14.2606 1.67495 15.2333 1.47138 16.2152 1.47344C17.1967 1.47179 18.169 1.67569 19.0763 2.07346C19.9837 2.47123 20.8083 3.05508 21.5032 3.79164C22.1981 4.52821 22.7496 5.40305 23.1261 6.36617C23.5026 7.32928 23.6968 8.36179 23.6975 9.40469C23.6966 10.4474 23.5022 11.4798 23.1256 12.4427C22.749 13.4057 22.1976 14.2803 21.5027 15.0167C20.8078 15.7531 19.9832 16.3368 19.076 16.7345C18.1687 17.1322 17.1966 17.336 16.2152 17.3344C12.0784 17.3344 8.72695 13.7844 8.72695 9.40469Z" fill="white"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.15011 24.9438L1.4707 22.097L7.40747 15.7876C7.40747 15.7876 7.54864 16.9829 8.26041 17.736C8.96923 18.4923 10.0869 18.636 10.0869 18.636L4.15011 24.9438Z" fill="white"/>
