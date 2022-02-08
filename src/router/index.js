@@ -24,6 +24,8 @@ import Mentions from '@/components/pages/Mentions'
 import QuiSommes from '@/components/pages/QuiSommes'
 import Utilisation from '@/components/pages/Utilisation'
 import Politique from '@/components/pages/Politique'
+import Contact from '@/components/pages/Contact'
+import Search from '@/components/pages/Search'
 
 Vue.use(Router)
 
@@ -48,6 +50,8 @@ export default new Router({
     {path: '/parcours', name: 'Parcours', component: Parcours},
     {path: '/lexique', name: 'Lexique', component: Lexique},
     {path: '/lexique_sommaire', name: 'Lexique_Sommaire', component: Lexique_Sommaire},
+    {path: '/contact', name: 'Contact', component: Contact},
+    {path: '/search', name: 'Search', component: Search},
 
   ]
 })

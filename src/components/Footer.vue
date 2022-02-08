@@ -10,7 +10,7 @@
           <router-link to="/quisommes" class="navi__lien"> A propos </router-link>
         </li>
         <li class="navi__menu">
-          <router-link to="/" class="navi__lien"> Parcours</router-link>
+          <router-link to="/presentation_parcours" class="navi__lien"> Parcours</router-link>
         </li>
         <li class="navi__menu">
           <router-link to="/tuto" class="navi__lien"> Tutos </router-link>
