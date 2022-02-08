@@ -78,7 +78,7 @@
               <li class="nav__ligne"><router-link to="/tuto_html" class="nav__lien"> HTML </router-link></li>
               <li class="nav__ligne"><router-link to="/tuto_css" class="nav__lien"> CSS </router-link></li>
               <li class="nav__ligne"><router-link to="/tuto_figma" class="nav__lien"> Figma </router-link></li>
-              <li class="nav__ligne"><router-link to="/tuto_adobe" class="nav__lien"> Adobe XD </router-link></li>
+              <li class="nav__ligne"><router-link to="/tuto_javascript" class="nav__lien"> JavaScript </router-link></li>
             </ul>
             <li class="nav__ligne nav__ligne--titre">Back</li>
             <ul class="nav__ssderoulant">
