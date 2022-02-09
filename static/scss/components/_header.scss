@@ -95,7 +95,7 @@
         font-family: $font-titre;
         font-size: rem(40);
         /* Degrader de la couleur du texte (se trouve aussi dans nav a)*/ 
-        background:-webkit-linear-gradient(right, $skyblue 30%, $green 76%);
+        background:-webkit-linear-gradient(right, $skyblue 30%, $greenblue 76%);
         background-clip:text;
         -webkit-background-clip:text;
         color:transparent;
@@ -112,7 +112,7 @@
         color: $white;
         border: none;
         box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
-        background: $green;
+        background: $greenblue;
         border-radius: 5px;
         width: rem(40);
         height: rem(40);
@@ -243,22 +243,143 @@
     &icon {
         grid-row: 3/ span (1);
     }
+&list {
+    text-align : center;
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+    grid-row: 1 /span 3;
+    grid-column: 2 /span 1;
+    align-self: center;
 
+}
+&item{ 
+  padding-top: 40px;
+  padding-bottom: 40px;
 
+}
+&icon {
+    grid-row: 3/ span (1);
+}
 
+}
+// Modal connexion mobile
 
+.burgerform {
+    grid-column: 1/ span (1);
+    display : grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap : 20;
+}
+.burger {
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    position: fixed;
+    background-color: $purple;
+    top: 0; bottom: 0;
+    left: 0; right : 0;
+    font-size: $text-xl;
+    transition: all .4s ease-in-out;
+    z-index : 2;
+    grid-template-columns: repeat(1, 1fr);
+    padding-left : 20px;
+    padding-right : 20px;
+    &__close {
+        color: white;
+        text-decoration: none;
+        grid-column: 6 / span (1);
+        justify-self: end;
+        align-self: start;
+        }
+    &__svg {
+        margin-top : 16px;
+    }
+    &__link {
+        color : $gold;
+        text-decoration: none;
+        grid-column: 2 /span 4;
+        padding: 0px;
+        font-size: rem(24);
+    }
+    &__desc {
+        color : $gold;
+        grid-column: 2 /span (4);
+        padding: 0px;
+        font-family: $font-titre;
+        font-size: rem(40);
+        align-self: end;
+    }
+    &__form {
+        grid-column: 2/ span (4) ;
+        padding : 0px;
+        border-radius: 12px;
+        box-shadow: inset 0 4px 4px 0 rgba(0,0,0,0.2);
+        border-style: none;
+    }
+    &__submit {
+        grid-column: 2/ span (4);
+        height : 74px;
+        background-color: $green;
+        color: $white;
+        font : {
+            size : rem(40);
+            family : $font-titre;
+        }
+        border-radius: 12px;;
+        border-style: none;
+        box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
+    }
+    &__btn{
+        grid-column: 2/ span (4);
+        background-color: $greenblue;
+
+        color:$white;
+        height: 74px;
+        font : {
+            size : rem(40);
+            family : $font-titre;
+        }
+        border-radius: 12px;
+        border-style: none;
+        box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
+
+    }
+}
+
+.burger--open {
+    visibility: visible;
+    opacity: 1;
+    }
+
+.burger:target {
+    visibility: visible;
+    opacity: 1;
+    }
+.burgerMenu {
+        grid-column: 3 /span 1;
+        grid-row: 1;
+        cursor: pointer;
+        background: none;
+        border: none;
+        -webkit-appearance: none;
+        appearance: none;
+        outline: none;
+        justify-content: center;
+        align-items: center;
+        z-index : 1;
+        background-color: none;
+        color : $gold;
+        text-decoration: none;
+        grid-column: 2 /span 1;
+        padding: 0px;
+        font-family: $font-titre;
+        font-size: rem(40);
+        }
 }
 
 
 
-
-
-
-
-
-
-
-}
 
 
 
@@ -292,7 +413,7 @@
         font-family: $font-titre;
         font-size: $title-xxl;
         /* Degrader de la couleur du texte (se trouve aussi dans nav a)*/ 
-        background:-webkit-linear-gradient(right, $skyblue 30%, $green 76%);
+        background:-webkit-linear-gradient(right, $skyblue 30%, $greenblue 76%);
         background-clip:text;
         -webkit-background-clip:text;
         color:transparent;
@@ -315,7 +436,7 @@
         color: $white;
         border: none;
         box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
-        background: $green;
+        background: $greenblue;
         border-radius: 5px;
         width: rem(80);
         height: rem(40);
@@ -411,5 +532,12 @@
         font-family: $font-titre;
 
     }
+}
+.burgerform {
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    position: fixed;
+    
 }
 }
