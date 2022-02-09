@@ -24,10 +24,10 @@
         <!-- {{bob(listeTuto)}} -->
 
         <p>Tuto Aléatoire</p>
-        <p > {{listeTuto[0].titre}}</p>
-        <img :src="listeTuto[0].image" alt="">
-        <h5>Note</h5> : <p>{{listeTuto[0].note}}/5</p>
-        <router-link :to="{ name: 'Module_Tuto', params : {id : listeTuto[0].id}}">
+        <p > {{listeOrderByRandom[0].titre}}</p>
+        <img :src="listeOrderByRandom[0].image" alt="">
+        <h5>Note</h5> : <p>{{listeOrderByRandom[0].note}}/5</p>
+        <router-link :to="{ name: 'Module_Tuto', params : {id : listeOrderByRandom[0].id}}">
           <button  type="submit" >Voir le tuto</button>
         </router-link>
         <!-- fin tuto -->
@@ -66,11 +66,6 @@
       data() {
           return {
               listeTuto : [],
-              tailleTuto: null,
-              monTuto: null,
-              monId: null,
-              tempo: null,
-
           }
       },
       computed:{
@@ -87,6 +82,21 @@
                 if (a.date < b.date) return 1;
                 if (a.date > b.date) return -1;
                 return 0;
+            }
+            return this.listeTuto.sort(compare);
+        },
+        listeOrderByRandom:function(){
+            // let random_id = Math.ceil(Math.random()*this.listeTuto.length);
+            // console.log('test random', random_id) ; 
+            // let random_id = Math.floor(Math.random() * 3)-1;
+            // console.log('test pascal', random_id);
+            // let tempo = this.listeTuto.length;
+            
+
+            function compare(a,b) {
+                let   random_id = Math.floor(Math.random() * 3)-1;
+                return random_id
+                
             }
             return this.listeTuto.sort(compare);
         },
