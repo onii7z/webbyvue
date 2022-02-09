@@ -93,7 +93,7 @@
             // let tempo = this.listeTuto.length;
             
 
-            function compare(a,b) {
+            function compare() {
                 let   random_id = Math.floor(Math.random() * 3)-1;
                 return random_id
                 
