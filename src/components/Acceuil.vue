@@ -21,11 +21,13 @@
           <button  type="submit" >Voir le tuto</button>
         </router-link>
 
+        <!-- {{bob(listeTuto)}} -->
+
         <p>Tuto Aléatoire</p>
-        <p > {{listeOrderByDate[0].titre}}</p>
-        <img :src="listeOrderByDate[0].image" alt="">
-        <h5>Note</h5> : <p>{{listeOrderByDate[0].note}}/5</p>
-        <router-link :to="{ name: 'Module_Tuto', params : {id : listeOrderByDate[0].id}}">
+        <p > {{listeTuto[0].titre}}</p>
+        <img :src="listeTuto[0].image" alt="">
+        <h5>Note</h5> : <p>{{listeTuto[0].note}}/5</p>
+        <router-link :to="{ name: 'Module_Tuto', params : {id : listeTuto[0].id}}">
           <button  type="submit" >Voir le tuto</button>
         </router-link>
         <!-- fin tuto -->
@@ -64,6 +66,11 @@
       data() {
           return {
               listeTuto : [],
+              tailleTuto: null,
+              monTuto: null,
+              monId: null,
+              tempo: null,
+
           }
       },
       computed:{
@@ -83,6 +90,27 @@
             }
             return this.listeTuto.sort(compare);
         },
+        
+// bob: function(table){
+//     this.tailleTuto = table.lenght;
+//     this.monTuto = Math.floor(Math.random() * this.tailleTuto);
+//     this.monId = table[this.monTuto].id;
+//     this.tempo = table[0];
+//     table[0] = table[this.monId];
+//     table[this.monId] = this.tempo;
+// },
+  
+        // listeOrderByRandom:function(){
+        //   this.tailleTuto = this.listeTuto.lenght;
+        //   this.monTuto = Math.floor(Math.random() * this.tailleTuto);
+        //   this.monid = this.listeTuto[this.montuto].id;
+        //   function compare(a,b) {
+        //         if (a.id = this.monid) return 1;
+        //         else return -1;
+        //     };
+        //   return this.listeTuto.sort(compare);
+          
+        // }
                
       },
       created() {
