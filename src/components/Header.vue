@@ -21,25 +21,29 @@
       </a>
     </div>
     <!-- Menu Burger -->
-    <div class="header__burger">
+    <!-- <div class="header__burger">
       <svg width="38" height="37" viewBox="0 0 38 37" fill="none" xmlns="http://www.w3.org/2000/svg">
 <ellipse cx="19" cy="18.5" rx="19" ry="18.5" fill="#585CA6"/>
 <path d="M28 24H10V22H28V24ZM28 19H10V17H28V19ZM28 14H10V12H28V14Z" fill="white"/>
 </svg>
-    </div>
+    </div> -->
     <!--  -->
     <!-- Nav Burger -->
     <div class="headermenu menu" :class="menuIsOpen && 'menu--open'" id="modal">
         <nav class="headermenu burg" >
             <!-- <img class="navimg" src="src/assets/img/free_logo_2022.png" alt="Logo FreeMusic"> -->
             <ul class="burglist">
-                <li class="burgitem"><a class="burglink" href="#">Accueil</a></li>
+                <li class="burgitem"><a class="burglink" href="#">Connexion</a></li>
+                <li class="burgitem"><router-link to="/" class="burglink" href="#" >Accueil</router-link></li>
                 <li class="burgitem"><a class="burglink" href="#">A propos</a></li>
-                <li class="burgitem"><a class="burglink" href="#">Parcours</a></li>
-                <li class="burgitem"><a class="burglink" href="#">Tutos</a></li>
+                <li class="burgitem"><router-link to="/presentation_parcours" class="burglink" href="#">Parcours</router-link></li>
+                <li class="burgitem"><router-link to="/tuto" class="burglink" href="#">Tutos</router-link></li>
 
             </ul>
-            <a href="#" class="burg__close">&times;</a>
+            <a href="#" class="burg__close"><svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M31.6666 6.33331L6.33331 31.6666M31.6666 31.6666L6.33331 6.33331L31.6666 31.6666Z" stroke="white" stroke-width="2" stroke-linecap="round"/>
+</svg>
+</a>
         </nav>
     </div>
     <div class="headerform">
@@ -47,8 +51,11 @@
             <button class="headerbtn menuBurger" 
                 @pointerdown="menuIsOpen = !menuIsOpen" 
                 :class="menuIsOpen && 'menuBurger--open'">
-                    <span class="menuBurgerbar"></span>
-                    <span class="menuBurgerbar"></span></button>
+                <svg width="38" height="37" viewBox="0 0 38 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="19" cy="18.5" rx="19" ry="18.5" fill="#585CA6"/>
+<path d="M28 24H10V22H28V24ZM28 19H10V17H28V19ZM28 14H10V12H28V14Z" fill="white"/>
+</svg>
+                  </button>
             </form>
         </div>
     <!-- nav du header -->
