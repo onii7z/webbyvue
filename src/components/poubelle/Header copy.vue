@@ -8,76 +8,47 @@
       />
     </router-link>
     <!-- titre -->
-    <h1 class="header__titre" v-for="option in liste" :key="option.id"
-    >{{option.acf.titre_du_site}} {{option.acf.slogan_du_site}}
-    </h1>
+    <h1 class="header__titre">{{ liste.title }} {{ liste.description }}</h1>
     <!-- inscription/connexion -->
     <div class="header__btn">
       <router-link to="/">
         <button  type="submit" class="header__button">Connexion</button>
       </router-link>
-      <a href="https://webby.houlle.org/wp-login.php?action=register">
+      <router-link to="/" >
         <button  type="submit" class="header__button">Inscription</button>
-      </a>
+      </router-link>
     </div>
     <!-- Menu Burger -->
+    <div class="header__burger">
+      <svg width="38" height="37" viewBox="0 0 38 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="19" cy="18.5" rx="19" ry="18.5" fill="#585CA6"/>
+<path d="M28 24H10V22H28V24ZM28 19H10V17H28V19ZM28 14H10V12H28V14Z" fill="white"/>
+</svg>
+    </div>
+    <!--  -->
     <!-- Nav Burger -->
     <div class="headermenu menu" :class="menuIsOpen && 'menu--open'" id="modal">
         <nav class="headermenu burg" >
-              <ul class="burglist">
-                <li class="burgitem">
-                  <form class="burglink burgerMenu" action="#connexion">
-                    <button class="burgerMenu" @pointerdown="burgerIsOpen = !burgerIsOpen" 
-                            :class="burgerIsOpen && 'burgerMenu--open'">
-                              Connexion
-                    </button>
-                  </form>
-                </li>
-                <li class="burgitem"><router-link to="/" class="burglink" href="#" >Accueil</router-link></li>
+            <!-- <img class="navimg" src="src/assets/img/free_logo_2022.png" alt="Logo FreeMusic"> -->
+            <ul class="burglist">
+                <li class="burgitem"><a class="burglink" href="#">Accueil</a></li>
                 <li class="burgitem"><a class="burglink" href="#">A propos</a></li>
-                <li class="burgitem"><router-link to="/presentation_parcours" class="burglink" href="#">Parcours</router-link></li>
-                <li class="burgitem"><router-link to="/tuto" class="burglink" href="#">Tutos</router-link></li>
+                <li class="burgitem"><a class="burglink" href="#">Parcours</a></li>
+                <li class="burgitem"><a class="burglink" href="#">Tutos</a></li>
 
             </ul>
-            <a href="#" class="burg__close"><svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M31.6666 6.33331L6.33331 31.6666M31.6666 31.6666L6.33331 6.33331L31.6666 31.6666Z" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-          </a>
+            <a href="#" class="burg__close">&times;</a>
         </nav>
     </div>
-    <div class="headerform"  >
+    <div class="headerform">
             <form class="headerform" action="#modal">
             <button class="headerbtn menuBurger" 
                 @pointerdown="menuIsOpen = !menuIsOpen" 
                 :class="menuIsOpen && 'menuBurger--open'">
-                <svg width="38" height="37" viewBox="0 0 38 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <ellipse cx="19" cy="18.5" rx="19" ry="18.5" fill="#585CA6"/>
-                  <path d="M28 24H10V22H28V24ZM28 19H10V17H28V19ZM28 14H10V12H28V14Z" fill="white"/>
-                </svg>
-                  </button>
+                    <span class="menuBurgerbar"></span>
+                    <span class="menuBurgerbar"></span></button>
             </form>
         </div>
-
-      <!-- Modal de connexion version mobile -->
-
-        <div class="burgerform burger" :class="burgerIsOpen && 'burger--open'" id="connexion">
-          <form class="burgerform">
-              <a href="#modal" class="burger__close">
-                <svg class="burger__svg" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M31.6666 6.33331L6.33331 31.6666M31.6666 31.6666L6.33331 6.33331L31.6666 31.6666Z" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-            </a>
-            <p class="burger__desc" >Nom d'utilisateur</p>
-            <input class="burger__form" type="text">
-            <p class="burger__desc">Mot de passe</p>
-            <input class="burger__form" type="password">
-            <a class="burger__link" href="#">Mot de passe oublié ? </a>
-            <input class="burger__submit" type="submit" value="Se connecter">
-            <button class="burger__btn" >S'inscrire</button>
-           
-          </form>
-        </div>
-
     <!-- nav du header -->
     <nav class="header__nav nav">
       <ul class="nav__main">
@@ -139,16 +110,35 @@ export default {
     };
   },
   created() {
-            axios({
-                method: 'get',
-                url: param.host + 'option',
-            }).then(function(response) {
-                console.log('Response :', response);
-                this.liste = response.data;
-                console.log('Liste Options', this.liste);
-            }.bind(this))
-            .catch(error => console.log(error))
-        },
+    axios({
+      method: "post",
+      url: param.auth,
+      data: {
+        username: param.user,
+        password: param.psw,
+      },
+    })
+      .then(
+        function (response) {
+          // console.log("Reponse token", response);
+          let token = response.data.token;
+          // console.log("Token", token)
+          let headers = { Authorization: "Bearer " + token };
+          axios({
+            method: "get",
+            url: param.host + "settings",
+            headers: headers,
+          }).then(
+            function (response) {
+              // console.log('test', response);
+              this.liste = response.data;
+              // console.log('liste', this.liste);
+            }.bind(this)
+          );
+        }.bind(this)
+      )
+      .catch((error) => console.log(error));
+  },
 };
 </script>
 

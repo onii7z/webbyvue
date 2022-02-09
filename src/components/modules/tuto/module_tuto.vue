@@ -1,7 +1,7 @@
 <template>
     <div>
+            <h3 style="color:black;">{{tuto.titre}}</h3>
         <div v-for="tutos in tuto" :key="tutos.id">
-            <h3>{{tuto.titre}}</h3>
             <h5>Catégorie</h5>
             <p v-for="cat in tutos.categorie" :key="cat.id">
                 {{cat.nom}}
