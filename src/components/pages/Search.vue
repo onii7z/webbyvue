@@ -27,13 +27,6 @@
       },
       computed:{  
             // FONCTIONNE 
-            // recherche: function(){
-            //     var query = this.query;
-            //     return this.search.filter(function(tuto){
-
-            //         return tuto.titre.includes(query);
-            //     })
-            // },
             recherche: function(){
                 var query = this.query;
                 return this.search.filter(function(tuto){
@@ -41,6 +34,15 @@
                     return tuto.titre.includes(query);
                 })
             },
+            // recherche: function(){
+            //     var query = this.query;
+            //     let test = this.search.forEach(function(tuto){
+            //         console.log('Data1', tuto);
+
+            //         return tuto.titre.includes(query);
+            //     })
+            //     return test;
+            // },
 
         // recherche: function(){
         //       var query = this.query;
