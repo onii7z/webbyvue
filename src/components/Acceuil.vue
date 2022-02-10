@@ -95,7 +95,7 @@
 
             function compare() {
                 let   random_id = Math.floor(Math.random() * 3)-1;
-                return random_id
+                return random_id;
                 
             }
             return this.listeTuto.sort(compare);
