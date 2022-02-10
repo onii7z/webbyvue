@@ -2,7 +2,7 @@
     <div>
         <input v-model="query" type="search" placeholder="Recherche de tuto">
         <button>Search</button>
-        <!-- <p v-if="recherche.length == 0">Aucun résultat</p> -->
+        <p v-if="recherche.length == 0">Aucun résultat</p>
         <div v-for="tuto in recherche" :key="tuto.id">
             <img :src="tuto.image" alt="">
             <h3>{{tuto.titre}}</h3>
