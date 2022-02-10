@@ -2,6 +2,7 @@
     <div>
         <input v-model="query" type="search" placeholder="Recherche de tuto">
         <button>Search</button>
+        <!-- <p v-if="recherche.length == 0">Aucun résultat</p> -->
         <div v-for="tuto in recherche" :key="tuto.id">
             <img :src="tuto.image" alt="">
             <h3>{{tuto.titre}}</h3>
@@ -26,14 +27,36 @@
           }
       },
       computed:{  
-            // FONCTIONNE 
+            // FONCTIONNE mais pas comme je veux
             recherche: function(){
                 var query = this.query;
                 return this.search.filter(function(tuto){
-
-                    return tuto.titre.includes(query);
+                    console.log('titre', tuto.titre);
+                    return tuto.titre.toLowerCase().includes(query.toLowerCase());
                 })
             },
+
+
+            // recherche: function(){
+            //     var query = this.query;
+            //     return this.search.filter(function(tuto){
+            //         console.log('titre', tuto.nom);
+            //         return tuto.titre.toLowerCase().includes(query.toLowerCase());
+            //     })
+            // },
+            // bySpecialite: function(spe){
+            //     return this.search.filter(function(tuto){
+            //         return tuto.categorie.nom === spe;
+            //     })
+            // }
+            // recherche: function(){
+            //     // var query = this.query;
+            //    const newArray = this.search.filter((value, index) => {
+            //         console.log('value', value);
+            //         console.log('index', index);
+            // // if (value > 5) return true;
+            // });
+            // },
             // recherche: function(){
             //     var query = this.query;
             //     let test = this.search.forEach(function(tuto){

@@ -861,12 +861,16 @@ img {
     -ms-grid-column: 2;
     -ms-grid-column-span: 2;
     grid-column: 2 / span 2;
+    -ms-grid-row: 1;
+    grid-row: 1;
   }
   .tuto__barre {
     color: #1B884C;
     -ms-grid-column: 4;
     -ms-grid-column-span: 8;
     grid-column: 4 / span 8;
+    -ms-grid-row: 1;
+    grid-row: 1;
   }
   .tuto__sstitre {
     color: #1B884C;
@@ -884,8 +888,6 @@ img {
     -ms-grid-column: 8;
     -ms-grid-column-span: 4;
     grid-column: 8 / span 4;
-    -ms-grid-row: 2;
-    grid-row: 2;
   }
   .tuto__comm {
     -ms-grid-column: 4;
