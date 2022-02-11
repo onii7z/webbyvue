@@ -21,6 +21,7 @@ h1,h2,h3,h4,h5,h6 {
     // gap: rem(30);
     padding-left: rem(30);
     padding-right: rem(30);
+    // grid-auto-flow: column dense;
 }
 img {
     height: rem(150);

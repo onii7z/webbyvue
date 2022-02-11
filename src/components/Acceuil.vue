@@ -5,31 +5,31 @@
         <!-- fin du slider -->
 
         <!-- liste des tutos -->
-        <p>Best tuto</p>
-        <p > {{listeOrderByNote[0].titre}}</p>
-        <img :src="listeOrderByNote[0].image" alt="">
-        <h5>Note</h5> : <p>{{listeOrderByNote[0].note}}/5</p>
-        <router-link :to="{ name: 'Module_Tuto', params : {id : listeOrderByNote[0].id}}">
-          <button  type="submit" >Voir le tuto</button>
-        </router-link>
+        <div class="grid">
+          <p>Best tuto</p>
+          <h3 class="cards__titre"> {{listeOrderByNote[0].titre}}</h3>
+          <img class="cards__img" :src="listeOrderByNote[0].image" alt="">
+          <h5 class="cards__desc">Note : {{listeOrderByNote[0].note}}/5</h5>
+          <router-link class="cards__lien" :to="{ name: 'Module_Tuto', params : {id : listeOrderByNote[0].id}}">
+            <p class="cards__sstitre">Voir le tuto</p>
+          </router-link>
 
-        <p>Dernier Tuto</p>
-        <p > {{listeOrderByDate[0].titre}}</p>
-        <img :src="listeOrderByDate[0].image" alt="">
-        <h5>Note</h5> : <p>{{listeOrderByDate[0].note}}/5</p>
-        <router-link :to="{ name: 'Module_Tuto', params : {id : listeOrderByDate[0].id}}">
-          <button  type="submit" >Voir le tuto</button>
-        </router-link>
+          <p>Dernier Tuto</p>
+          <p > {{listeOrderByDate[0].titre}}</p>
+          <img :src="listeOrderByDate[0].image" alt="">
+          <h5>Note</h5> : <p>{{listeOrderByDate[0].note}}/5</p>
+          <router-link :to="{ name: 'Module_Tuto', params : {id : listeOrderByDate[0].id}}">
+            <p class="cards__sstitre">Voir le tuto</p>
+          </router-link>
 
-        <!-- {{bob(listeTuto)}} -->
-
-        <p>Tuto Aléatoire</p>
-        <p > {{listeOrderByRandom[0].titre}}</p>
-        <img :src="listeOrderByRandom[0].image" alt="">
-        <h5>Note</h5> : <p>{{listeOrderByRandom[0].note}}/5</p>
-        <router-link :to="{ name: 'Module_Tuto', params : {id : listeOrderByRandom[0].id}}">
-          <button  type="submit" >Voir le tuto</button>
-        </router-link>
+          <p>Tuto Aléatoire</p>
+          <p > {{listeOrderByRandom[0].titre}}</p>
+          <img :src="listeOrderByRandom[0].image" alt="">
+          <h5>Note</h5> : <p>{{listeOrderByRandom[0].note}}/5</p>
+          <router-link :to="{ name: 'Module_Tuto', params : {id : listeOrderByRandom[0].id}}">
+            <p class="cards__sstitre">Voir le tuto</p>
+          </router-link>
+        </div>
         <!-- fin tuto -->
 
         <section>

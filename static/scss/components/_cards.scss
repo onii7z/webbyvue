@@ -1,0 +1,50 @@
+.cards {
+    grid-column: span 3;
+    grid-template-rows: repeat(4, 1fr);
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
+    margin-top: rem(20);
+    margin-bottom: rem(20);
+    border-bottom-left-radius: rem(5) rem(5);
+    border-bottom-right-radius: rem(5) rem(5);
+    &__img {
+        width: 100%;
+        height: auto;
+        grid-row: 1;
+        border: rem(2)  solid $skyblue;
+    }
+    &__titre {
+        color: $green;
+        padding-top: rem(10);
+        padding-left: rem(10);
+        padding-right: rem(10);
+        grid-row: 2;
+    }
+    &__desc {
+        color: $purple;
+        padding-top: rem(5);
+        padding-bottom: rem(5);
+        padding-right: rem(10);
+        grid-row: 3;
+        text-align: end;
+    }
+    &__lien {
+        grid-row: 4;
+        text-decoration: none;
+        text-align: center;
+
+    }
+    &__sstitre {
+        font-family: $font-titre;
+        font-size: $text-xl;
+        padding-top: rem(5);
+        padding-bottom: rem(5);
+        color: $white;
+        grid-row: 4;
+        text-decoration: none;
+        width: 100%;
+        height: auto;
+        background-color: $greenblue;
+        border-bottom-left-radius: rem(5) rem(5);
+        border-bottom-right-radius: rem(5) rem(5);
+    }
+}

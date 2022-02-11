@@ -895,4 +895,66 @@ img {
     grid-column: 4 / span 7;
   }
 }
+
+.cards {
+  grid-column: span 3;
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-bottom-left-radius: 0.3125rem 0.3125rem;
+  border-bottom-right-radius: 0.3125rem 0.3125rem;
+}
+
+.cards__img {
+  width: 100%;
+  height: auto;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  border: 0.125rem solid #1DD0D7;
+}
+
+.cards__titre {
+  color: #1B884C;
+  padding-top: 0.625rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+.cards__desc {
+  color: #585CA6;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  padding-right: 0.625rem;
+  -ms-grid-row: 3;
+  grid-row: 3;
+  text-align: end;
+}
+
+.cards__lien {
+  -ms-grid-row: 4;
+  grid-row: 4;
+  text-decoration: none;
+  text-align: center;
+}
+
+.cards__sstitre {
+  font-family: "Odibee Sans", cursive;
+  font-size: 1.375rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  color: #FFFFFF;
+  -ms-grid-row: 4;
+  grid-row: 4;
+  text-decoration: none;
+  width: 100%;
+  height: auto;
+  background-color: #03A696;
+  border-bottom-left-radius: 0.3125rem 0.3125rem;
+  border-bottom-right-radius: 0.3125rem 0.3125rem;
+}
 /*# sourceMappingURL=style.css.map */
