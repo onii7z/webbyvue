@@ -3,7 +3,7 @@
     <!-- Place du logo -->
     <router-link to="/" class="header__logo">
       <img 
-        src="../assets/webbie_logo_3.gif"
+        src="../assets/logov2.gif"
         alt="Webby"
       />
     </router-link>

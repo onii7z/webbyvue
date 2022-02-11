@@ -5,33 +5,108 @@
 /* Font-family styles */
 /* Font variantes */
 /* Espaces */
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto Condensed", sans-serif;
+@media (max-width: 1000px) {
+  * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  /* passer body (et tous les éléments de largeur fixe) en largeur automatique */
+  body {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+  /* fixer une largeur maximale de 100% aux éléments potentiellement problématiques */
+  img,
+  table,
+  td,
+  blockquote,
+  code,
+  pre,
+  textarea,
+  input,
+  iframe,
+  object,
+  embed,
+  video {
+    max-width: 100%;
+  }
+  /* conserver le ratio des images */
+  img {
+    height: auto;
+  }
+  /* gestion des mots longs */
+  textarea,
+  table,
+  td,
+  th,
+  code,
+  pre,
+  samp {
+    -webkit-hyphens: auto;
+    /* césure propre */
+    -ms-hyphens: auto;
+        hyphens: auto;
+    word-wrap: break-word;
+    /* passage à la ligne forcé */
+  }
+  code,
+  pre,
+  samp {
+    white-space: pre-wrap;
+    /* passage à la ligne spécifique pour les éléments à châsse fixe */
+  }
+  /* Passer à une seule colonne (à appliquer aux éléments multi-colonnes) */
+  .element1,
+  .element2 {
+    float: none;
+    width: auto;
+  }
+  /* masquer les éléments superflus */
+  .hide_mobile {
+    display: none !important;
+  }
+  .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto, auto, auto;
+        grid-template-columns: auto, auto, auto;
+    grid-column-gap: 1.875rem;
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Odibee Sans", cursive;
-}
-
-.grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[12];
-      grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 1.875rem;
-  padding-left: 1.875rem;
-  padding-right: 1.875rem;
-}
-
-img {
-  height: 9.375rem;
-  width: 9.375rem;
+@media (min-width: 1000px) {
+  * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Condensed", sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Odibee Sans", cursive;
+  }
+  .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[12];
+        grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 1.875rem;
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
+  img {
+    height: 9.375rem;
+    width: 9.375rem;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -102,10 +177,6 @@ img {
     display: none;
   }
   .header {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: auto auto auto;
-        grid-template-columns: auto auto auto;
     -ms-grid-rows: 1fr auto;
         grid-template-rows: 1fr auto;
     border-bottom: solid 2px;
@@ -114,14 +185,17 @@ img {
     margin-bottom: 20px;
   }
   .header__logo {
-    width: 100%;
-    height: 100%;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    height: auto;
+    -ms-grid-column: 1;
+    grid-column: 1;
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
     grid-row: 1 /span 2;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   .header__titre {
     font-family: "Odibee Sans", cursive;
@@ -487,11 +561,11 @@ img {
     padding-top: 0;
   }
   .header__logo {
-    width: 100px;
-    height: 100px;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
   .header__titre {
     font-family: "Odibee Sans", cursive;
