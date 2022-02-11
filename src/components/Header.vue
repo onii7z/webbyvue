@@ -13,9 +13,9 @@
     </h1>
     <!-- inscription/connexion -->
     <div class="header__btn">
-      <router-link to="/">
+
         <button  type="submit" class="header__button">Connexion</button>
-      </router-link>
+
       <a href="https://webby.houlle.org/wp-login.php?action=register">
         <button  type="submit" class="header__button">Inscription</button>
       </a>
@@ -78,7 +78,7 @@
           </form>
         </div>
 
-<!-- Modal de connexion version bureau -->
+      <!-- Modal de connexion version bureau -->
 
         <!-- <div class="connectform connect" :class="connectIsOpen && 'connect--open'" id="connection">
           <form class="connectform">
