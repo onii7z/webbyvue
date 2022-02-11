@@ -78,6 +78,25 @@
           </form>
         </div>
 
+<!-- Modal de connexion version bureau -->
+
+        <!-- <div class="connectform connect" :class="connectIsOpen && 'connect--open'" id="connection">
+          <form class="connectform">
+              <a href="#modal" class="connect__close">
+                <svg class="connect__svg" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M31.6666 6.33331L6.33331 31.6666M31.6666 31.6666L6.33331 6.33331L31.6666 31.6666Z" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </a>
+            <p class="connect__desc" >Nom d'utilisateur</p>
+            <input class="connect__form" type="text">
+            <p class="connect__desc">Mot de passe</p>
+            <input class="connect__form" type="password">
+            <a class="connect__link" href="#">Mot de passe oublié ? </a>
+            <input class="header__submit" type="submit" value="Se connecter">
+           
+          </form>
+        </div> -->
+
     <!-- nav du header -->
     <nav class="header__nav nav">
       <ul class="nav__main">
