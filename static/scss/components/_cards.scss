@@ -7,8 +7,9 @@
     border-bottom-left-radius: rem(5) rem(5);
     border-bottom-right-radius: rem(5) rem(5);
     &__img {
+        object-fit: cover;
         width: 100%;
-        height: auto;
+        height: 200px;
         grid-row: 1;
         border: rem(2)  solid $skyblue;
     }

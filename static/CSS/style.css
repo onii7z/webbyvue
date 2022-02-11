@@ -909,8 +909,10 @@ img {
 }
 
 .cards__img {
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
-  height: auto;
+  height: 200px;
   -ms-grid-row: 1;
   grid-row: 1;
   border: 0.125rem solid #1DD0D7;
