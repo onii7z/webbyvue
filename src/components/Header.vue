@@ -10,7 +10,7 @@
     </h1>
     <!-- inscription/connexion -->
     <div class="header__btn">
-      <button type="submit" class="header__button">Connexion</button>
+      <button type="submit" class="header__button">{{titre}}</button>
 
       <a href="https://webby.houlle.org/wp-login.php?action=register">
         <button type="submit" class="header__button">Inscription</button>
@@ -35,7 +35,9 @@
           <li class="burgitem">
             <router-link to="/" class="burglink" href="#">Accueil</router-link>
           </li>
-          <li class="burgitem"><a class="burglink" href="#">A propos</a></li>
+          <li class="burgitem">
+            <router-link to="/quisommes" class="burglink " href="#">A propos</router-link>
+          </li>
           <li class="burgitem">
             <router-link to="/presentation_parcours" class="burglink" href="#"
               >Parcours</router-link
@@ -97,7 +99,7 @@
       id="connexion"
     >
       <form class="burgerform">
-        <a href="#modal" class="burger__close">
+        <a href="#" class="burger__close">
           <svg
             class="burger__svg"
             width="38"
@@ -119,7 +121,7 @@
         <p class="burger__desc">Mot de passe</p>
         <input class="burger__form" type="password" v-model="utilisateur.password" />
         <a class="burger__link" href="#">Mot de passe oublié ? </a>
-        <input class="burger__submit" type="submit" value="Se connecter" />
+        <button class="burger__submit" type="submit" value="Se connecter" @click="connect" >{{titre}}</button>
         <button class="burger__btn">S'inscrire</button>
       </form>
     </div>
@@ -271,6 +273,7 @@
 
 <script>
 import param from "@/param/param";
+import appService from '@/services/appService';
 
 export default {
   name: "Header",
@@ -283,9 +286,13 @@ export default {
         token: null,
         role: null,
       },
+      titre:null,
+      menuIsOpen: "",
+      burgerIsOpen: "",
     };
   },
   created() {
+    this.titre = param.titre;
     axios({
       method: "get",
       url: param.host + "option",
@@ -299,6 +306,42 @@ export default {
       )
       .catch((error) => console.log(error));
   },
+  methods:{
+    connect:function(){
+      console.log("Connect");
+
+      let params = new FormData();
+      params.append('username', this.utilisateur.username);
+      params.append('password', this.utilisateur.password);
+
+      axios({
+        method: 'post',
+        // url: param.auth+"token",
+        url: param.auth,
+        data: params
+      }).then(function(response) {
+        console.log("reponse token", response);
+        this.utilisateur = response.data;
+        console.log("utilisateur", response.data);
+        this.titre = this.utilisateur.user_display_name;
+        // $('#cnxModal').modal('hide');
+        // save local
+
+        let localValues = {
+          nom:    this.utilisateur.user_display_name,
+          role:   this.utilisateur.user_role[0],
+          token:  this.utilisateur.token
+        };
+        appService.setLocal(localValues);
+
+      }.bind(this))
+      .catch(error => {
+        console.log("erreur de connexion", error);
+
+        // this.message = param.message.errCnx;
+      })
+    },
+  }
 };
 </script>
 

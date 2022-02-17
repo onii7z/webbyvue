@@ -7,5 +7,7 @@ export default{
     user : 'adminWP',
     psw : 'Toto1234@',
 
+    titre : 'Se connecter',
+
 
 }
