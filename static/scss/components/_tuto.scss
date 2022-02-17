@@ -37,8 +37,16 @@
         &__comm {
             grid-column: 4 / span 7;
         }
-        // &__comments {
-        //     grid-column: 4 / span 7;
-        // }
+        &__comments {
+            // display: grid;
+            grid-column: 4 / span 7;
+            width: 100%;
+        }
+    }
+    .comments {
+        &__input {
+            width: 100%;
+            height: rem(120);
+        }
     }
 }

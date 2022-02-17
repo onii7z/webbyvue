@@ -33,7 +33,7 @@ export default new Router({
   routes: [
     {path: '/', name: 'Acceuil', component: Acceuil},
     {path: '/tuto', name: 'Tuto', component: Tuto},
-    {path: '/module_tuto', name: 'Module_Tuto', component: Module_Tuto},
+    {path: '/module_tuto/:id', name: 'Module_Tuto', component: Module_Tuto},
     {path: '/tuto_html', name: 'Tuto_Html', component: Tuto_Html},
     {path: '/tuto_javascript', name: 'Tuto_JavaScript', component: Tuto_JavaScript},
     {path: '/tuto_cms', name: 'Tuto_Cms', component: Tuto_Cms},
