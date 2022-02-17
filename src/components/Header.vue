@@ -48,7 +48,6 @@
               >Tutos</router-link
             >
           </li>
-          test
         </ul>
         <a href="#" class="burg__close"
           ><svg
