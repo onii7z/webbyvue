@@ -12,7 +12,6 @@ import Tuto_Css from '@/components/modules/tuto/menu/Tuto_Css'
 import Tuto_Figma from '@/components/modules/tuto/menu/Tuto_Figma'
 import Tuto_Php from '@/components/modules/tuto/menu/Tuto_Php'
 import Tuto_Sql from '@/components/modules/tuto/menu/Tuto_Sql'
-import Tuto_test from '@/components/modules/tuto/menu/Tuto_test'
 
 import Liste_parcours from '@/components/modules/parcours/Liste_parcours'
 import Parcours from '@/components/modules/parcours/Parcours'
@@ -53,6 +52,7 @@ export default new Router({
     {path: '/lexique_sommaire', name: 'Lexique_Sommaire', component: Lexique_Sommaire},
     {path: '/contact', name: 'Contact', component: Contact},
     {path: '/search', name: 'Search', component: Search},
+    
 
   ]
 })

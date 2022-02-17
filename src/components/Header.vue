@@ -132,7 +132,7 @@
               <li class="nav__ligne"><router-link to="/tuto_cms" class="nav__lien"> CMS </router-link></li>
               <li class="nav__ligne"><router-link to="/tuto_php" class="nav__lien"> PHP </router-link></li>
               <li class="nav__ligne"><router-link to="/tuto_sql" class="nav__lien"> MySQL </router-link></li>
-              <li class="nav__ligne"><router-link to="/tuto_test" class="nav__lien"> Test </router-link></li>
+              
             </ul>
           </ul>
         </li>
