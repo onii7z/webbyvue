@@ -24,6 +24,8 @@
             <p class="tuto__desc">{{tutos.note}}/5</p>
             <img class="tuto__image" :src="tutos.image" alt="">
             <h3 class="tuto__titre">Commentaires : </h3><hr class="tuto__barre">
+            <input class="tuto__comments" type="textarea" placeholder="Votre commentaire">
+            <button type="submit">Envoyer</button>
             <p class="tuto__comm" v-for="com in tutos.comments" :key="com.id">
                 {{com.comment_content}}
             </p>

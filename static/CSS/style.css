@@ -945,6 +945,7 @@
     grid-column: 4 / span 8;
     -ms-grid-row: 1;
     grid-row: 1;
+    height: 0.125rem;
   }
   .tuto__sstitre {
     color: #1B884C;
@@ -964,6 +965,11 @@
     grid-column: 8 / span 4;
   }
   .tuto__comm {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 7;
+    grid-column: 4 / span 7;
+  }
+  .tuto__comments {
     -ms-grid-column: 4;
     -ms-grid-column-span: 7;
     grid-column: 4 / span 7;

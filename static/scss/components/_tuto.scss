@@ -19,6 +19,7 @@
             color: $green;
             grid-column: 4 / span 8;
             grid-row: 1;
+            height: rem(2);
         }
         &__sstitre {
             color: $green;
@@ -34,6 +35,9 @@
             // grid-row: 2
         }
         &__comm {
+            grid-column: 4 / span 7;
+        }
+        &__comments {
             grid-column: 4 / span 7;
         }
     }
