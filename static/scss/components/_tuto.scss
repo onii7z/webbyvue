@@ -36,6 +36,8 @@
         }
         &__comm {
             grid-column: 4 / span 7;
+            width: 100%;
+            height: rem(120);
         }
         &__comments {
             // display: grid;
