@@ -52,6 +52,7 @@ export default new Router({
     {path: '/lexique_sommaire', name: 'Lexique_Sommaire', component: Lexique_Sommaire},
     {path: '/contact', name: 'Contact', component: Contact},
     {path: '/search', name: 'Search', component: Search},
+    
 
   ]
 })

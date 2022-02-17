@@ -218,21 +218,10 @@
             </ul>
             <li class="nav__ligne nav__ligne--titre">Back</li>
             <ul class="nav__ssderoulant">
-              <li class="nav__ligne">
-                <router-link to="/tuto_cms" class="nav__lien">
-                  CMS
-                </router-link>
-              </li>
-              <li class="nav__ligne">
-                <router-link to="/tuto_php" class="nav__lien">
-                  PHP
-                </router-link>
-              </li>
-              <li class="nav__ligne">
-                <router-link to="/tuto_sql" class="nav__lien">
-                  MySQL
-                </router-link>
-              </li>
+              <li class="nav__ligne"><router-link to="/tuto_cms" class="nav__lien"> CMS </router-link></li>
+              <li class="nav__ligne"><router-link to="/tuto_php" class="nav__lien"> PHP </router-link></li>
+              <li class="nav__ligne"><router-link to="/tuto_sql" class="nav__lien"> MySQL </router-link></li>
+              
             </ul>
           </ul>
         </li>
