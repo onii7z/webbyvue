@@ -544,14 +544,17 @@
 }
 .modal__connect {
     position : absolute;
+    right: 20px;
     background-color: $white;
     color : $green;
     display: grid;
     grid-template-columns: auto;
+    z-index: 2;
 }
 
 
 .connect {
+    grid-column: 10 / span 12;
     padding : 5px;
     border : 2px solid;
     border-color: $skyblue;
