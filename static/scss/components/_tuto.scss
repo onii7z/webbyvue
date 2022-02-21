@@ -11,42 +11,92 @@
         // grid-template-rows: repeat(12, 1fr);
 
         &__titre {
+            margin-top: 30px;
+            margin-bottom: 20px;
             color: $green;
             grid-column: 2 / span 2;
+            font-family: $font-titre;
+            font-size: rem(40);
+            font-weight: 100;
+            align-self: center;
             // grid-row: 1;
+            
         }
         &__barre {
-            color: $green;
+            margin-top: 20px;
+           border-style:solid;
+            border-width: 2px;
+            border-color: $greenmoyen;
             grid-column: 4 / span 8;
             // grid-row: 1;
-            height: rem(2);
+            height: rem(3);
+            align-self: center;
         }
         &__sstitre {
-            color: $green;
+            color: $greenmoyen;
             grid-column: 2 / span 2;
+            font-family: $font-titre;
+            font-size: rem(25);
+            font-weight: 300;
+            text-align: end;
+            align-self: center;
         }
         &__desc {
-            color: $green;
-            grid-column: 3 / span 4;
-            // display: flex;
+            color: $purple;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            grid-column: 4 / span 4;
+            font-family: $font-text;
+            font-size: rem(18);
+            align-self: center;
+        
+        }
+        &__lien {
+            justify-self: start;
+            align-content: start;
+            
         }
         &__image {
+            height: 247px;
+            width: 440px;
             grid-column: 8 / span 4;
-            // grid-row: 2
+             grid-row: 2 / span 6 ;
         }
         &__comm {
             grid-column: 4 / span 7;
+            color: $purple;
+            font-family: $font-text;
+
         }
-        &__comments {
+        &__input {
             // display: grid;
             grid-column: 4 / span 7;
             width: 100%;
         }
+        &__comments {
+            grid-column: 4 / span 7;
+        }
+        
+    }
+    button{
+        padding: 0;
+        width: rem(80);
+        height: rem(30);
+        border-style: none;
+        background-color: $green;
+        align-content: center;
+
     }
     .comments {
         &__input {
             width: 100%;
             height: rem(120);
+            background: rgba($color: #03A696, $alpha: 0.2);
+            border-width: 0.5px;
+            border-color: rgba($color: #787878, $alpha: 0.6);
+        }
+        &__btn {
+            grid-column: 10 / span 10;
         }
     }
 }

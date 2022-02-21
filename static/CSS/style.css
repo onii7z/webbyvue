@@ -931,49 +931,112 @@
             box-sizing: border-box;
   }
   .tuto__titre {
+    margin-top: 30px;
+    margin-bottom: 20px;
     color: #1B884C;
     -ms-grid-column: 2;
     -ms-grid-column-span: 2;
     grid-column: 2 / span 2;
+    font-family: "Odibee Sans", cursive;
+    font-size: 2.5rem;
+    font-weight: 100;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   .tuto__barre {
-    color: #1B884C;
+    margin-top: 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #5BBF7E;
     -ms-grid-column: 4;
     -ms-grid-column-span: 8;
     grid-column: 4 / span 8;
-    height: 0.125rem;
+    height: 0.1875rem;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   .tuto__sstitre {
-    color: #1B884C;
+    color: #5BBF7E;
     -ms-grid-column: 2;
     -ms-grid-column-span: 2;
     grid-column: 2 / span 2;
+    font-family: "Odibee Sans", cursive;
+    font-size: 1.5625rem;
+    font-weight: 300;
+    text-align: end;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   .tuto__desc {
-    color: #1B884C;
-    -ms-grid-column: 3;
+    color: #585CA6;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    -ms-grid-column: 4;
     -ms-grid-column-span: 4;
-    grid-column: 3 / span 4;
+    grid-column: 4 / span 4;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1.125rem;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .tuto__lien {
+    -ms-grid-column-align: start;
+        justify-self: start;
+    -ms-flex-line-pack: start;
+        align-content: start;
   }
   .tuto__image {
+    height: 247px;
+    width: 440px;
     -ms-grid-column: 8;
     -ms-grid-column-span: 4;
     grid-column: 8 / span 4;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 6;
+    grid-row: 2 / span 6;
   }
   .tuto__comm {
     -ms-grid-column: 4;
     -ms-grid-column-span: 7;
     grid-column: 4 / span 7;
+    color: #585CA6;
+    font-family: "Roboto Condensed", sans-serif;
   }
-  .tuto__comments {
+  .tuto__input {
     -ms-grid-column: 4;
     -ms-grid-column-span: 7;
     grid-column: 4 / span 7;
     width: 100%;
   }
+  .tuto__comments {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 7;
+    grid-column: 4 / span 7;
+  }
+  button {
+    padding: 0;
+    width: 5rem;
+    height: 1.875rem;
+    border-style: none;
+    background-color: #1B884C;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
   .comments__input {
     width: 100%;
     height: 7.5rem;
+    background: rgba(3, 166, 150, 0.2);
+    border-width: 0.5px;
+    border-color: rgba(120, 120, 120, 0.6);
+  }
+  .comments__btn {
+    -ms-grid-column: 10;
+    -ms-grid-column-span: 10;
+    grid-column: 10 / span 10;
   }
 }
 
