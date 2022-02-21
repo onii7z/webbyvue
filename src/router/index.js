@@ -27,6 +27,9 @@ import Politique from '@/components/pages/Politique'
 import Contact from '@/components/pages/Contact'
 import Search from '@/components/pages/Search'
 
+import Modal from '@/components/modules/modal/modal'
+import Connect from '@/components/modules/modal/connect'
+
 Vue.use(Router)
 
 export default new Router({
@@ -52,6 +55,8 @@ export default new Router({
     {path: '/lexique_sommaire', name: 'Lexique_Sommaire', component: Lexique_Sommaire},
     {path: '/contact', name: 'Contact', component: Contact},
     {path: '/search', name: 'Search', component: Search},
+    {path: '/modal', name: 'Modal', component: Modal},
+    {path : '/connect', name : 'Connect', component : Connect},
     
 
   ]

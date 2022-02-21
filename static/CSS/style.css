@@ -257,9 +257,7 @@
     background: linear-gradient(180deg, #1b884c 0%, #1b884c 0%, #00d4ff 100%);
   }
   .menu {
-    visibility: hidden;
-    opacity: 0;
-    overflow: hidden;
+    opacity: 1;
     position: fixed;
     background-color: #585CA6;
     top: 0;
@@ -273,21 +271,12 @@
     display: -ms-grid;
     display: grid;
   }
-  .menu:target {
-    visibility: visible;
-    opacity: 1;
-  }
-  .menu--open {
-    visibility: visible;
-    opacity: 1;
-  }
   .menuBurger {
     -ms-grid-column: 3;
     -ms-grid-column-span: 1;
     grid-column: 3 /span 1;
     -ms-grid-row: 1;
     grid-row: 1;
-    cursor: pointer;
     background: none;
     border: none;
     -webkit-appearance: none;
@@ -329,6 +318,7 @@
         grid-template-rows: 120px, 150px, 100px;
   }
   .burg__close {
+    background-color: #585CA6;
     color: white;
     text-decoration: none;
     -ms-grid-column: 3;
@@ -339,6 +329,7 @@
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    -webkit-appearance: none;
   }
   .burglink {
     color: #FFDF67;
@@ -703,6 +694,67 @@
     opacity: 0;
     overflow: hidden;
     position: fixed;
+  }
+  .modal__connect {
+    position: absolute;
+    background-color: #FFFFFF;
+    color: #1B884C;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+  .connect {
+    padding: 5px;
+    border: 2px solid;
+    border-color: #1DD0D7;
+  }
+  .connect__submit {
+    background-color: #1B884C;
+    color: #FFFFFF;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 3;
+    grid-column: 2 / span 3;
+    height: 30px;
+    margin-top: 10px;
+  }
+  .connect__close {
+    -webkit-appearance: none;
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 1;
+    grid-column: 5/span 1;
+    -ms-grid-column-align: end;
+        justify-self: end;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    background-color: #FFFFFF;
+    border: none;
+  }
+  .connect__desc {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+    grid-column: 1 / span 5;
+    font-size: 1.125rem;
+    font-family: "Roboto Condensed", sans-serif;
+  }
+  .connect__input {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+    grid-column: 1/ span 5;
+  }
+  .connect__link {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+    grid-column: 1 / span 5;
+    font-size: 0.875rem;
+    font-family: "Roboto Condensed", sans-serif;
+  }
+  .apparition {
+    -webkit-transition: opacity 0.4s linear, -webkit-transform 0.4s cubic-bezier(0.5, 0, 0.5, 1);
+    transition: opacity 0.4s linear, -webkit-transform 0.4s cubic-bezier(0.5, 0, 0.5, 1);
+    transition: transform 0.4s cubic-bezier(0.5, 0, 0.5, 1), opacity 0.4s linear;
+    transition: transform 0.4s cubic-bezier(0.5, 0, 0.5, 1), opacity 0.4s linear, -webkit-transform 0.4s cubic-bezier(0.5, 0, 0.5, 1);
   }
 }
 
