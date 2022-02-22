@@ -8,18 +8,18 @@
              <Mobile v-show="isMobilevisible"
             @close="closeMobile"/>
             <li class="burgitem">
-                <router-link to="/" class="burglink" href="#" @tap="close">Accueil</router-link>
+                <router-link to="/" class="burglink" href="#" v-on:click.native="close()">Accueil</router-link>
             </li>
             <li class="burgitem">
-                <router-link to="/quisommes" class="burglink " href="#" @tap="close">A propos</router-link>
+                <router-link to="/quisommes" class="burglink " href="#" v-on:click.native="close()">A propos</router-link>
             </li>
             <li class="burgitem">
-                <router-link to="/presentation_parcours" class="burglink" href="#" @tap="close"
+                <router-link to="/presentation_parcours" class="burglink" href="#" v-on:click.native="close()"
                 >Parcours</router-link
                 >
             </li>
             <li class="burgitem">
-                <router-link to="/tuto" class="burglink" href="#" @tap="close"
+                <router-link to="/tuto" class="burglink" href="#" v-on:click.native="close()"
                 >Tutos</router-link
                 >
             </li>
