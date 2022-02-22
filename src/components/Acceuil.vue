@@ -60,7 +60,6 @@
           <router-link to="/presentation_parcours" class="nav__lien"> Commencez par ici ! </router-link>
         </section>
 
-
     </div>
     
 </template>
