@@ -975,6 +975,130 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
+  .tuto {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .tuto__titre {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / span 3;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #1B884C;
+    font-family: "Odibee Sans";
+    font-size: 2.5rem;
+    font-weight: 100;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .tuto__barre {
+    display: none;
+    margin-top: 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #5BBF7E;
+    height: 0.1875rem;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .tuto__sstitre {
+    background-color: rgba(91, 191, 126, 0.2);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / span 1;
+    color: #5BBF7E;
+    font-family: "Odibee Sans";
+    font-size: 1.5625rem;
+    font-weight: 300;
+    text-align: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .tuto__desc {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 3;
+    grid-column: 2 / span 3;
+    color: #585CA6;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1.125rem;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .tuto__lien {
+    -ms-grid-column-align: start;
+        justify-self: start;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .tuto__image {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 /span 3;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / span 1;
+    height: 90%;
+    width: 100%;
+    -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    border: solid;
+    border-color: #1DD0D7;
+    border-width: 0.7px;
+  }
+  .tuto__comm {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / span 3;
+    width: 100%;
+    height: 7.5rem;
+    margin: 10px;
+    color: #585CA6;
+    font-family: "Roboto Condensed", sans-serif;
+    border: solid;
+    border-style: dashed;
+    -o-border-image: linear-gradient(to left, #1DD0D7, #1B884C) 2 0;
+       border-image: -webkit-gradient(linear, right top, left top, from(#1DD0D7), to(#1B884C)) 2 0;
+       border-image: linear-gradient(to left, #1DD0D7, #1B884C) 2 0;
+  }
+  .tuto__input {
+    width: 100%;
+  }
+  .tuto__comments {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / span 3;
+    justify-items: end;
+  }
+  button {
+    padding: 0;
+    width: 5rem;
+    height: 1.875rem;
+    border-style: none;
+    background-color: #1B884C;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .comments__input {
+    width: 100%;
+    height: 7.5rem;
+    background: rgba(3, 166, 150, 0.2);
+    border-width: 0.5px;
+    border-color: rgba(120, 120, 120, 0.6);
+  }
+  .comments__btn {
+    justify-items: end;
+  }
 }
 
 @media (min-width: 1000px) {
@@ -1063,8 +1187,9 @@
     font-family: "Roboto Condensed", sans-serif;
     border: solid;
     border-style: dashed;
-    -o-border-image: repeating-linear-gradient(to left, #1DD0D7, #1B884C) 2 0;
-       border-image: repeating-linear-gradient(to left, #1DD0D7, #1B884C) 2 0;
+    -o-border-image: linear-gradient(to left, #1DD0D7, #1B884C) 2 0;
+       border-image: -webkit-gradient(linear, right top, left top, from(#1DD0D7), to(#1B884C)) 2 0;
+       border-image: linear-gradient(to left, #1DD0D7, #1B884C) 2 0;
   }
   .tuto__input {
     -ms-grid-column: 4;
