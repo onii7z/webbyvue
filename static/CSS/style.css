@@ -1058,13 +1058,8 @@
     -ms-grid-column: 4;
     -ms-grid-column-span: 7;
     grid-column: 4 / span 7;
-<<<<<<< HEAD
     width: 100%;
     height: 7.5rem;
-=======
-    color: #585CA6;
-    font-family: "Roboto Condensed", sans-serif;
->>>>>>> master
   }
   .tuto__input {
     -ms-grid-column: 4;
