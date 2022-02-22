@@ -1164,4 +1164,63 @@
   border-bottom-left-radius: 0.3125rem 0.3125rem;
   border-bottom-right-radius: 0.3125rem 0.3125rem;
 }
+
+@media (max-width: 1000px) {
+  * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+@media (min-width: 1000px) {
+  * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .contact {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1.125rem;
+  }
+  .contact__titre {
+    margin-top: 1.875rem;
+    color: #1B884C;
+    font-family: "Odibee Sans";
+    font-size: 3.75rem;
+    -ms-grid-column: 6;
+    -ms-grid-column-span: 2;
+    grid-column: 6 / span 2;
+    text-align: center;
+  }
+  .contact__form {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 6;
+    grid-column: 4 / span 6;
+    border: 0.125rem solid #1DD0D7;
+    border-radius: 0.9375rem;
+    padding: 1.25rem;
+    margin-bottom: 6.25rem;
+    margin-top: 2.5rem;
+  }
+  .form {
+    padding-top: 0.625rem;
+  }
+  .form__desc {
+    color: #585CA6;
+  }
+  .form__input {
+    color: #585CA6;
+    border-radius: 0.3125rem;
+  }
+  .form__input--text {
+    color: #585CA6;
+    width: 100%;
+  }
+  .form__btn {
+    color: #585CA6;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 /*# sourceMappingURL=style.css.map */
