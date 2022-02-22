@@ -31,7 +31,7 @@
                 <button type="submit" class="comments__btn">Envoyer</button>
             </form>
             <div class="tuto__comm" v-for="com in tutos.comments" :key="com.id">
-                <p>{{com.comment_author}}</p>
+                <p>{{com.comment_author}} : </p>
                 <br>
                 <p>{{com.comment_content}}</p> 
             </div>
