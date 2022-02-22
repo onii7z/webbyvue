@@ -1057,6 +1057,14 @@
     grid-column: 4 / span 7;
     width: 100%;
     height: 7.5rem;
+    margin: 10px;
+    padding: 20px;
+    color: #585CA6;
+    font-family: "Roboto Condensed", sans-serif;
+    border: solid;
+    border-style: dashed;
+    -o-border-image: repeating-linear-gradient(to left, #1DD0D7, #1B884C) 2 0;
+       border-image: repeating-linear-gradient(to left, #1DD0D7, #1B884C) 2 0;
   }
   .tuto__input {
     -ms-grid-column: 4;
@@ -1068,6 +1076,7 @@
     -ms-grid-column: 4;
     -ms-grid-column-span: 7;
     grid-column: 4 / span 7;
+    justify-items: end;
   }
   button {
     padding: 0;
@@ -1086,9 +1095,7 @@
     border-color: rgba(120, 120, 120, 0.6);
   }
   .comments__btn {
-    -ms-grid-column: 10;
-    -ms-grid-column-span: 10;
-    grid-column: 10 / span 10;
+    justify-items: end;
   }
 }
 
