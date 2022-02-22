@@ -30,9 +30,10 @@
                 <input v-model="commentaires.contenu" class="comments__input"  type="textarea" placeholder="Votre commentaire">
                 <button type="submit" class="comments__btn">Envoyer</button>
             </form>
-            <p class="tuto__comm" v-for="com in tutos.comments" :key="com.id">
-                {{com.comment_content}}
-            </p>
+            <div class="tuto__comm" v-for="com in tutos.comments" :key="com.id">
+                <p>{{com.comment_author}}</p>
+                <p>{{com.comment_content}}</p> 
+            </div>
         </div>
     </div>
 </template>
