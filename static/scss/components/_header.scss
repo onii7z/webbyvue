@@ -216,7 +216,7 @@
         grid-column: 3 / span (1);
         justify-self: end;
         align-self: center;
-        -webkit-appearance: none;
+        border : none; 
     }
     &link {
         color : $gold;
@@ -262,6 +262,17 @@
 &icon {
     grid-row: 3/ span (1);
 }
+&__connect {
+    -webkit-appearance: none;
+    color : $gold;
+    grid-column: 2 /span 1;
+    padding: 0px;
+    font-family: $font-titre;
+    font-size: rem(40);
+    border : none;
+    background-color: $purple;
+
+}
 
 }
 // Modal connexion mobile
@@ -273,9 +284,6 @@
     gap : 20;
 }
 .burger {
-    visibility: hidden;
-    opacity: 0;
-    overflow: hidden;
     position: fixed;
     background-color: $purple;
     top: 0; bottom: 0;
@@ -287,11 +295,13 @@
     padding-left : 20px;
     padding-right : 20px;
     &__close {
+        background-color: $purple;
         color: white;
         text-decoration: none;
         grid-column: 6 / span (1);
         justify-self: end;
         align-self: start;
+        border : none;
         }
     &__svg {
         margin-top : 16px;
@@ -348,15 +358,6 @@
     }
 }
 
-.burger--open {
-    visibility: visible;
-    opacity: 1;
-    }
-
-.burger:target {
-    visibility: visible;
-    opacity: 1;
-    }
 .burgerMenu {
         grid-column: 3 /span 1;
         grid-row: 1;
@@ -590,9 +591,6 @@
             family : $font-text;
         }
     }
-}
-.apparition {
-    transition: transform 0.4s cubic-bezier(0.5, 0, 0.5, 1), opacity 0.4s linear;
 }
 
 }

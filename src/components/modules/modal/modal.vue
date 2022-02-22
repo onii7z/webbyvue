@@ -2,7 +2,11 @@
     <div class="headermenu menu">
         <nav class="headermenu burg">
             <ul class="burglist">
-            <li class="burgitem burglink">Connexion</li>
+            <li class="burgitem burglink">
+                <button class="burg__connect" @click ="showMobile">Connexion</button>
+            </li>
+             <Mobile v-show="isMobilevisible"
+            @close="closeMobile"/>
             <li class="burgitem">
                 <router-link to="/" class="burglink" href="#" @tap="close">Accueil</router-link>
             </li>
@@ -40,17 +44,26 @@
     </div>
 </template>
 <script>
-
+import Mobile from '@/components/modules/modal/mobile';
 export default {
+
     name: "Modal",
+    components : {Mobile},
     data() {
     return {
+        isMobilevisible : false,
     }
     },
     methods:{
         close(){
         this.$emit('close');
-    }
+    }, 
+    showMobile(){
+      this.isMobilevisible= true;
+    },
+    closeMobile(){
+      this.isMobilevisible= false; 
+    },
         }
 };
 
