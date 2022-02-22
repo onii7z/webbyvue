@@ -147,9 +147,8 @@
 // Menu Burger 
 
 .menu {
-    visibility: hidden;
-    opacity: 0;
-    overflow: hidden;
+    opacity: 1;
+    // overflow: hidden;
     position: fixed;
     background-color: $purple;
     top: 0; bottom: 0;
@@ -161,21 +160,21 @@
 
     }
 
-.menu:target {
-    visibility: visible;
-    opacity: 1;
-}
+// .menu:target {
+//     visibility: visible;
+//     opacity: 1;
+// }
 
-.menu--open {
-    visibility: visible;
-    opacity: 1;
-    }
+// .menu--open {
+//     visibility: visible;
+//     opacity: 1;
+//     }
 
 
 .menuBurger {
     grid-column: 3 /span 1;
     grid-row: 1;
-    cursor: pointer;
+    // cursor: pointer;
     background: none;
     border: none;
     -webkit-appearance: none;
@@ -211,12 +210,13 @@
     grid-template-rows: 120px, 150px, 100px;
     
     &__close {
-
+        background-color: $purple ;
         color: white;
         text-decoration: none;
         grid-column: 3 / span (1);
         justify-self: end;
         align-self: center;
+        -webkit-appearance: none;
     }
     &link {
         color : $gold;
@@ -377,6 +377,7 @@
         font-family: $font-titre;
         font-size: rem(40);
         }
+
 }
 
 
@@ -541,4 +542,57 @@
     position: fixed;
     
 }
+.modal__connect {
+    position : absolute;
+    right: 70px;
+    top: 5px;
+    background-color: $white;
+    color : $green;
+    display: grid;
+    grid-template-columns: auto;
+    z-index: 2;
+}
+
+
+.connect {
+    padding : 5px;
+    border : 2px solid;
+    border-color: $skyblue;
+    &__submit {
+        background-color: $green;
+        color : $white;
+        grid-column: 2 / span 3;
+        height : 30px;
+        margin-top : 10px;
+    }
+    &__close {
+        -webkit-appearance: none;
+        grid-column: 5 / span (1);
+        justify-self: end;
+        align-self: start;
+        background-color: $white;
+        border : none;
+        }
+    &__desc {
+        grid-column: 1 / span 5;
+        font : {
+            size : $text-md;
+            family : $font-text;
+        }
+    }
+    &__input {
+        grid-column: 1/ span 5;
+    }
+    &__link {
+        grid-column: 1 / span 5;
+        font : {
+            size : rem(14);
+            family : $font-text;
+        }
+    }
+}
+.apparition {
+    transition: transform 0.4s cubic-bezier(0.5, 0, 0.5, 1), opacity 0.4s linear;
+}
+
 }

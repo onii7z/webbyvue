@@ -10,7 +10,10 @@
     </h1>
     <!-- inscription/connexion -->
     <div class="header__btn">
-      <button type="submit" class="header__button">{{titre}}</button>
+      <button @click ="showConnect" type="submit" class="header__button">{{titre}}</button>
+      <Connect v-show="isConnectvisible"
+      @close="closeConnect"
+    />
 
       <a href="https://webby.houlle.org/wp-login.php?action=register">
         <button type="submit" class="header__button">Inscription</button>
@@ -18,81 +21,34 @@
     </div>
     <!-- Menu Burger -->
     <!-- Nav Burger -->
-    <div class="headermenu menu" :class="menuIsOpen && 'menu--open'" id="modal">
-      <nav class="headermenu burg">
-        <ul class="burglist">
-          <li class="burgitem">
-            <form class="burglink burgerMenu" action="#connexion">
-              <button
-                class="burgerMenu"
-                @pointerdown="burgerIsOpen = !burgerIsOpen"
-                :class="burgerIsOpen && 'burgerMenu--open'"
-              >
-                Connexion
-              </button>
-            </form>
-          </li>
-          <li class="burgitem">
-            <router-link to="/" class="burglink" href="#">Accueil</router-link>
-          </li>
-          <li class="burgitem">
-            <router-link to="/quisommes" class="burglink " href="#">A propos</router-link>
-          </li>
-          <li class="burgitem">
-            <router-link to="/presentation_parcours" class="burglink" href="#"
-              >Parcours</router-link
-            >
-          </li>
-          <li class="burgitem">
-            <router-link to="/tuto" class="burglink" href="#"
-              >Tutos</router-link
-            >
-          </li>
-        </ul>
-        <a href="#" class="burg__close"
-          ><svg
-            width="38"
-            height="38"
-            viewBox="0 0 38 38"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M31.6666 6.33331L6.33331 31.6666M31.6666 31.6666L6.33331 6.33331L31.6666 31.6666Z"
-              stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
-          </svg>
-        </a>
-      </nav>
-    </div>
-    <div class="headerform">
-      <form class="headerform" action="#modal">
-        <button
-          class="headerbtn menuBurger"
-          @pointerdown="menuIsOpen = !menuIsOpen"
-          :class="menuIsOpen && 'menuBurger--open'"
-        >
-          <svg
+    
+    <div class="headerform" >
+
+
+          <button @click ="showModal" class="headerbtn menuBurger" >
+            <svg
             width="38"
             height="37"
             viewBox="0 0 38 37"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-          >
+            >
             <ellipse cx="19" cy="18.5" rx="19" ry="18.5" fill="#585CA6" />
             <path
               d="M28 24H10V22H28V24ZM28 19H10V17H28V19ZM28 14H10V12H28V14Z"
               fill="white"
             />
-          </svg>
-        </button>
-      </form>
+            </svg>
+          </button>
+          <Modal v-show="isModalvisible"
+      @close="closeModal"
+    />
+
+
     </div>
 
     <!-- Modal de connexion version mobile -->
-
+<!-- 
     <div
       class="burgerform burger"
       :class="burgerIsOpen && 'burger--open'"
@@ -124,7 +80,7 @@
         <button class="burger__submit" type="submit" value="Se connecter" @click="connect" >{{titre}}</button>
         <button class="burger__btn">S'inscrire</button>
       </form>
-    </div>
+    </div> -->
 
     <!-- Modal de connexion version bureau -->
 
@@ -263,9 +219,14 @@
 <script>
 import param from "@/param/param";
 import appService from '@/services/appService';
+import Connect from '@/components/modules/modal/connect';
+import Modal from '@/components/modules/modal/modal';
+
+
 
 export default {
   name: "Header",
+  components : {Connect, Modal},
   data() {
     return {
       liste: [],
@@ -278,6 +239,8 @@ export default {
       titre:null,
       menuIsOpen: "",
       burgerIsOpen: "",
+      isConnectvisible : false,
+      isModalvisible :false, 
     };
   },
   created() {
@@ -330,7 +293,20 @@ export default {
         // this.message = param.message.errCnx;
       })
     },
-  }
+    showConnect(){
+      this.isConnectvisible= true;
+    },
+    closeConnect(){
+      this.isConnectvisible= false; 
+    },
+    showModal(){
+      this.isModalvisible = true;
+    },
+    closeModal(){
+      this.isModalvisible = false;
+    },
+        }
+  
 };
 </script>
 
