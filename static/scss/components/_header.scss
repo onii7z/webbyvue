@@ -120,13 +120,6 @@
         
     
     }
-    // &__burger{
-    //     grid-column: 3 /span 1;
-    //     grid-row: 1;
-    //     align-self: center;
-    //     justify-self: center;
-
-    // }
     &form{
         grid-column: 3 /span 1;
         grid-row: 1;
@@ -148,7 +141,6 @@
 
 .menu {
     opacity: 1;
-    // overflow: hidden;
     position: fixed;
     background-color: $purple;
     top: 0; bottom: 0;
@@ -159,17 +151,6 @@
     display : grid;
 
     }
-
-// .menu:target {
-//     visibility: visible;
-//     opacity: 1;
-// }
-
-// .menu--open {
-//     visibility: visible;
-//     opacity: 1;
-//     }
-
 
 .menuBurger {
     grid-column: 3 /span 1;
@@ -244,36 +225,16 @@
     &icon {
         grid-row: 3/ span (1);
     }
-&list {
-    text-align : center;
-    list-style: none;
-    padding: 0px;
-    margin: 0;
-    grid-row: 1 /span 3;
-    grid-column: 2 /span 1;
-    align-self: center;
-
-}
-&item{ 
-  padding-top: 40px;
-  padding-bottom: 40px;
-
-}
-&icon {
-    grid-row: 3/ span (1);
-}
-&__connect {
-    -webkit-appearance: none;
-    color : $gold;
-    grid-column: 2 /span 1;
-    padding: 0px;
-    font-family: $font-titre;
-    font-size: rem(40);
-    border : none;
-    background-color: $purple;
-
-}
-
+    &__connect {
+        color : $gold;
+        font-family: $font-titre;
+        font-size: rem(40);
+        border : none;
+        background-color: $purple;
+        width : auto;
+        height : auto;
+        }
+    }
 }
 // Modal connexion mobile
 
@@ -379,7 +340,6 @@
         font-size: rem(40);
         }
 
-}
 
 
 
