@@ -10,7 +10,7 @@
                 <p class="text" >{{area.area_text}}</p><br><br>
             </div>
             <div class="contenu__link" v-for="link in content.lien_contenu" :key="link.id">
-                <p class="link">{{link.link_content}}</p>
+                <a class="link" :href="link.link_content">{{link.link_content}}</a>
             </div>
             <svg class="contenu__ligne" width="100%" height="10px" version="1.1" xmlns="http://www.w3.org/2000/svg">
                 <line x1="10" x2="300" stroke="#5BBF7E" stroke-width="5"/>

@@ -2,7 +2,7 @@
     <div class="lexique">
         <h3 class="lexique__mot">{{lexique.nom}}</h3>
         <p class="lexique__desc">{{lexique.desc}}</p>
-        <a class="lexique__link" :href="lexique.link" >{{lexique.link}}</a>
+        <a class="lexique__lien" :href="lexique.link" >Voir plus</a>
     </div>
 </template>
 

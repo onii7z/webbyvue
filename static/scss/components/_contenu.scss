@@ -2,7 +2,6 @@
     margin : 20px; 
     &__contenu{
         display : inline;
-
     }
     &__text{
         padding : 0;
@@ -25,7 +24,11 @@
         padding-bottom: 20px;
         color : $greenbluefonce
     }
+    &__link {
+        padding-top: 5px;
+        margin-bottom : 10px;
 
+    }
 }
 
 .text {
@@ -35,8 +38,8 @@
 }
 
 .link {
-    padding-top: 5px;
-    padding-bottom : 10px;
+    text-decoration: none;
+    color : $skyblue;
 }
     
     
