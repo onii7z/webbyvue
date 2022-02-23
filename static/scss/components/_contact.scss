@@ -1,50 +1,74 @@
-@media (max-width: 1000px) {
-	* {
-		box-sizing: border-box;
-	}
-}
-@media (min-width: 1000px) {
+
 	* {
 		box-sizing: border-box;
 	}
     .contact {
-            font-family: $font-text;
-            font-size: $text-md;
+        font : {
+            size : $text-md;
+            family : $font-text;
+        }
         &__titre {
-            margin-top: rem(30);
+            font : {
+                size : $title-xl;
+                family : $font-titre;
+            }
             color: $green;
-            font-family: $font-titre;
-            font-size: rem(60);
-            grid-column: 6 / span 2 ;
-            text-align: center;
+            margin-top : rem(30);
         }
         &__form {
-            grid-column: 4 / span 6 ;
-            border: rem(2) solid $skyblue;
-            border-radius: rem(15);
+            border: rem(2) solid $greenclair;
             padding: rem(20);
             margin-bottom: rem(100);
+            height: auto;
+        }
+        .form {
+            padding-top: rem(10);
+            &__desc {
+                color: $skyblue;
+            }
+            &__input {
+                background-color: rgba($greenclair, $alpha: .5);
+                border-color : $green;
+                margin-bottom: 10px;
+                padding-left : 2px;
+            }
+            &__input--text {
+                width: 100%;
+                height : 100px;
+                border-color: $green;
+                padding-bottom: 75px;
+            }
+            &__btn {
+                background-color: $green;
+                color:$white;
+                width: auto;
+                height : 40px;
+                padding : 5px;
+                font : {
+                    size : $text-xl;
+                    family : $font-titre;
+                }
+                border-radius: 12px;
+                border-style: none;
+                box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
+            }
+        }
+        input::placeholder{
+            color : $green;
+        }
+    }
+   
+
+@media (min-width: 1000px) {
+    .contact {
+        &__titre {
+            font-size: rem(60);
+            grid-column: 2 / span 4 ;
+        }
+        &__form {
+            grid-column: 2 / span 6 ;
             margin-top: rem(40);
         }
     }
-    .form {
-        padding-top: rem(10);
-        &__desc {
-            color: $purple;
-            
-        }
-        &__input {
-            color: $purple;
-            border-radius: rem(5);
-        }
-        &__input--text {
-            color: $purple;
-            width: 100%;
-        }
-        &__btn {
-            color: $purple;
-            text-align: center;
-            justify-content: center;
-        }
-    }
+
 }
