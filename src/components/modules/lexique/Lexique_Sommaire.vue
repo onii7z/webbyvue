@@ -1,9 +1,15 @@
 <template>
-    <div>
-        <div v-for="lexique in lexiques" :key="lexique.id">
-            <router-link :to="{ name: 'Lexique', params : {id : lexique.id}}">
-                <h3>{{lexique.title.rendered}}</h3>
-            </router-link>
+    <div class="lexique">
+        <h2 class="lexique__title">Lexique</h2>
+        <div class="lexique__contenu" v-for="lexique in lexiques" :key="lexique.id">
+            <ul class="lexique__list">
+                <li class="lexique__item">
+                    <router-link class="lexique__link" :to="{ name: 'Lexique', params : {id : lexique.id}}">
+                        <h3 class="lexique__mot">{{lexique.title.rendered}}</h3>
+                    </router-link>
+                </li>
+            </ul>
+            
         
         </div>
     </div>

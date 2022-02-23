@@ -1,8 +1,8 @@
 <template>
-    <div>
-        <h3>{{lexique.nom}}</h3>
-        <p>{{lexique.desc}}</p>
-        <p>{{lexique.link}}</p>
+    <div class="lexique">
+        <h3 class="lexique__mot">{{lexique.nom}}</h3>
+        <p class="lexique__desc">{{lexique.desc}}</p>
+        <p class="lexique__link" >{{lexique.link}}</p>
     </div>
 </template>
 
