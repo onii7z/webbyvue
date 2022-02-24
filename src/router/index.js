@@ -51,7 +51,7 @@ export default new Router({
     {path: '/politique', name: 'Politique', component: Politique},
     {path: '/presentation_parcours', name: 'Presentation_parcours', component: Presentation_parcours},
     {path: '/liste_parcours', name: 'Liste_Parcours', component: Liste_parcours},
-    {path: '/parcours', name: 'Parcours', component: Parcours},
+    {path: '/parcours/:id', name: 'Parcours', component: Parcours},
     {path: '/lexique/:id', name: 'Lexique', component: Lexique},
     {path: '/lexique_sommaire', name: 'Lexique_Sommaire', component: Lexique_Sommaire},
     {path: '/contact', name: 'Contact', component: Contact},
