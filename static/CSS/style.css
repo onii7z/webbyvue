@@ -750,7 +750,6 @@
       grid-template-rows: 1fr auto;
   background-color: #000000;
   color: #FFFFFF;
-  bottom: 0;
   height: 7.5rem;
   width: 100%;
   padding-top: 1.25rem;
@@ -758,10 +757,12 @@
 
 .footer__titre {
   font-size: 1.5rem;
+  font-family: "Odibee Sans";
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1 / span 1;
   font-weight: 500;
+  margin-top: 0;
 }
 
 .footer__nav {
@@ -831,19 +832,14 @@
             box-sizing: border-box;
   }
   .footer {
-    background-color: #000000;
-    color: #FFFFFF;
-    bottom: 0;
     height: 7.5rem;
     width: 100%;
-    padding-top: 1.25rem;
   }
   .footer__titre {
     font-size: 3.375rem;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
     grid-column: 1 / span 3;
-    font-weight: 500;
   }
   .footer__nav {
     list-style: none;
