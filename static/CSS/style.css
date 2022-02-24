@@ -1113,9 +1113,8 @@
     font-family: "Roboto Condensed", sans-serif;
     border: solid;
     border-style: dashed;
-    -o-border-image: linear-gradient(to left, #1DD0D7, #1B884C) 2 0;
-       border-image: -webkit-gradient(linear, right top, left top, from(#1DD0D7), to(#1B884C)) 2 0;
-       border-image: linear-gradient(to left, #1DD0D7, #1B884C) 2 0;
+    -o-border-image: repeating-linear-gradient(to left, #1DD0D7, #1B884C) 2 0;
+       border-image: repeating-linear-gradient(to left, #1DD0D7, #1B884C) 2 0;
   }
   .tuto__input {
     -ms-grid-column: 4;
