@@ -1,10 +1,14 @@
 <template>
-    <div>
-        <p>Voici la liste de nos parcours proposés : </p>
-        <div v-for="parcours in liste" :key="parcours.id">
-            <router-link :to="{ name: 'Parcours', params : {id : parcours.id}}">
-                <h3>{{parcours.title.rendered}}</h3>
-            </router-link>
+    <div class="commaire">
+        <h2 class="sommaire__title">Liste des parcours </h2>
+        <div class="sommaire__contenu" v-for="parcours in liste" :key="parcours.id">
+            <ul class="sommaire__list">
+                <li class="sommaire__item">
+                    <router-link class="sommaire__link" :to="{ name: 'Parcours', params : {id : parcours.id}}">
+                        <h3 class="sommaire__mot">{{parcours.title.rendered}}</h3>
+                    </router-link>
+                </li>
+            </ul>
         </div>
     </div>
 </template>
