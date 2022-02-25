@@ -1503,8 +1503,12 @@
 }
 
 .bandeau__img {
-  height: 80px;
-  width: 57px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;

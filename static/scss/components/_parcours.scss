@@ -44,8 +44,10 @@
     
 
     &__img{
-        height: 80px;
-        width: 57px;
+        // height: 80px;
+        // width: 57px;
+        width: max-content;
+        height: max-content;
         align-self: center;
         justify-self: center;
         grid-row: 1;
