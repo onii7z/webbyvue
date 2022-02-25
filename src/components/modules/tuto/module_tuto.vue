@@ -26,6 +26,7 @@
             <p class="tuto__desc">{{tutos.note}}/5</p>
             <h5 class="t">Notez moi</h5>
             <p class="t">note/5</p>
+            <button>tt</button>
             <img class="tuto__image" :src="tutos.image" alt="">
             <h3 class="tuto__titre">Commentaires : </h3><hr class="tuto__barre">
             <form @submit="creer" class="tuto__comments comments">
