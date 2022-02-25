@@ -3,25 +3,25 @@
     <input class="recherche__barre" v-model="query" placeholder="Recherche de tuto" />
     <select class="recherche__cat" v-model="query">
       <option value="" selected disabled>Catégories</option>
-      <option v-for="cat in cats" :key="cat.id" :value="cat.name">
+      <option class="recherche__choix" v-for="cat in cats" :key="cat.id" :value="cat.name">
         {{ cat.name }}
       </option>
     </select>
     <select class="recherche__niv" v-model="query">
       <option  value="" selected disabled>Niveau</option>
-      <option v-for="niv in nivs" :key="niv.id" :value="niv.name">
+      <option class="recherche__choix" v-for="niv in nivs" :key="niv.id" :value="niv.name">
         {{ niv.name }}
       </option>
     </select>
     <select class="recherche__form" v-model="query">
       <option value="" selected disabled>Format</option>
-      <option v-for="format in formats" :key="format.id" :value="format.name">
+      <option class="recherche__choix" v-for="format in formats" :key="format.id" :value="format.name">
         {{ format.name }}
       </option>
     </select>
     <select class="recherche__lan" v-model="query">
       <option value="" selected disabled>Langue</option>
-      <option v-for="lang in langs" :key="lang.id" :value="lang.name">
+      <option class="recherche__choix" v-for="lang in langs" :key="lang.id" :value="lang.name">
         {{ lang.name }}
       </option>
     </select>
