@@ -1,6 +1,6 @@
 <template>
     <div class="parcours">
-       <h3 class="parcours__title">{{parcours.nom}}</h3>
+       <h3 class="parcours__title">{{parcours[0].nom}}</h3>
        <div class="parcours__etape etape" v-for="parcour in parcours" :key="parcour.id">
            <div class="parcours__bandeau bandeau">
                <h4 class="bandeau__sstitre">{{parcour.titre}}</h4>
@@ -52,9 +52,9 @@
                 method: 'get',
                 url : param.hostTuto + '/listeParcours/'+this.parcours.id,     
             }).then(response=>{
-                console.log('tt', response);
+                // console.log('tt', response);
                 this.parcours = response.data;
-                console.log('single parcours', this.parcours);
+                console.log('Parcours :', this.parcours);
             })
             .catch(error => console.log('erreur parcours', error))
         }
