@@ -1,32 +1,33 @@
 <template>
-  <div>
-    <input v-model="query" placeholder="Recherche de tuto" />
-    <select v-model="query">
-      <option selected disabled>Catégories</option>
+  <div class="recherche">
+    <input class="recherche__barre" v-model="query" placeholder="Recherche de tuto" />
+    <select class="recherche__cat" v-model="query">
+      <option value="" selected disabled>Catégories</option>
       <option v-for="cat in cats" :key="cat.id" :value="cat.name">
         {{ cat.name }}
       </option>
     </select>
-    <select v-model="query">
-      <option selected disabled>Niveau</option>
+    <select class="recherche__niv" v-model="query">
+      <option  value="" selected disabled>Niveau</option>
       <option v-for="niv in nivs" :key="niv.id" :value="niv.name">
         {{ niv.name }}
       </option>
     </select>
-    <select v-model="query">
-      <option selected disabled>Format</option>
+    <select class="recherche__form" v-model="query">
+      <option value="" selected disabled>Format</option>
       <option v-for="format in formats" :key="format.id" :value="format.name">
         {{ format.name }}
       </option>
     </select>
-    <select v-model="query">
-      <option selected disabled>Langue</option>
+    <select class="recherche__lan" v-model="query">
+      <option value="" selected disabled>Langue</option>
       <option v-for="lang in langs" :key="lang.id" :value="lang.name">
         {{ lang.name }}
       </option>
     </select>
-    <a href="https://webby.houlle.org/wp-admin/post-new.php?post_type=tuto">Ajouter un tuto</a>
-
+    <form class="recherche__ajout" action="https://webby.houlle.org/wp-admin/post-new.php?post_type=tuto">
+    <input  type="submit" class="recherche__btn" value="Ajouter un Tuto">
+    </form>
     <div class="grid">
       <p v-if="recherche.length == 0">Aucun résultat</p>
       <div class="cards" v-for="tuto in recherche" :key="tuto.id">
