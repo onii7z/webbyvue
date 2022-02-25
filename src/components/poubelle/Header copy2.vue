@@ -10,10 +10,10 @@
     </h1>
     <!-- inscription/connexion -->
     <div class="header__btn">
-      <button @click="showConnect" type="submit" class="header__button">
-        {{ titre }}
-      </button>
-      <Connect v-show="isConnectvisible" @close="closeConnect" />
+      <button @click ="showConnect" type="submit" class="header__button">{{titre}}</button>
+      <Connect v-show="isConnectvisible"
+      @close="closeConnect"
+    />
 
       <a href="https://webby.houlle.org/wp-login.php?action=register">
         <button type="submit" class="header__button">Inscription</button>
@@ -21,28 +21,34 @@
     </div>
     <!-- Menu Burger -->
     <!-- Nav Burger -->
+    
+    <div class="headerform" >
 
-    <div class="headerform">
-      <button @click="showModal" class="headerbtn menuBurger">
-        <svg
-          width="38"
-          height="37"
-          viewBox="0 0 38 37"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <ellipse cx="19" cy="18.5" rx="19" ry="18.5" fill="#585CA6" />
-          <path
-            d="M28 24H10V22H28V24ZM28 19H10V17H28V19ZM28 14H10V12H28V14Z"
-            fill="white"
-          />
-        </svg>
-      </button>
-      <Modal v-show="isModalvisible" @close="closeModal" />
+
+          <button @click ="showModal" class="headerbtn menuBurger" >
+            <svg
+            width="38"
+            height="37"
+            viewBox="0 0 38 37"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            >
+            <ellipse cx="19" cy="18.5" rx="19" ry="18.5" fill="#585CA6" />
+            <path
+              d="M28 24H10V22H28V24ZM28 19H10V17H28V19ZM28 14H10V12H28V14Z"
+              fill="white"
+            />
+            </svg>
+          </button>
+          <Modal v-show="isModalvisible"
+      @close="closeModal"
+    />
+
+
     </div>
 
     <!-- Modal de connexion version mobile -->
-    <!-- 
+<!-- 
     <div
       class="burgerform burger"
       :class="burgerIsOpen && 'burger--open'"
@@ -104,9 +110,19 @@
           </router-link>
         </li>
         <li class="nav__menu">
-          <router-link to="/tuto" class="nav__lien nav__lien--titles">
-            Tutos
-          </router-link>
+          <p class="nav__lien nav__lien--titles">A propos</p>
+          <ul class="nav__deroulant">
+            <li class="nav__ligne">
+              <router-link to="/quisommes" class="nav__lien">
+                Qui sommes-nous ?
+              </router-link>
+            </li>
+            <li class="nav__ligne">
+              <router-link to="/contact" class="nav__lien">
+                Nous contacter
+              </router-link>
+            </li>
+          </ul>
         </li>
         <li class="nav__menu">
           <router-link
@@ -129,24 +145,45 @@
           </ul>
         </li>
         <li class="nav__menu">
-          <p class="nav__lien nav__lien--titles">A propos</p>
+          <router-link to="/tuto" class="nav__lien nav__lien--titles">
+            Tutos
+          </router-link>
           <ul class="nav__deroulant">
-            <li class="nav__ligne">
-              <router-link to="/quisommes" class="nav__lien">
-                Qui sommes-nous ?
-              </router-link>
-            </li>
-            <li class="nav__ligne">
-              <router-link to="/contact" class="nav__lien">
-                Nous contacter
-              </router-link>
-            </li>
+            <li class="nav__ligne nav__ligne--titre">Front</li>
+            <ul class="nav__ssderoulant">
+              <li class="nav__ligne">
+                <router-link to="/tuto_html" class="nav__lien">
+                  HTML
+                </router-link>
+              </li>
+              <li class="nav__ligne">
+                <router-link to="/tuto_css" class="nav__lien">
+                  CSS
+                </router-link>
+              </li>
+              <li class="nav__ligne">
+                <router-link to="/tuto_figma" class="nav__lien">
+                  Figma
+                </router-link>
+              </li>
+              <li class="nav__ligne">
+                <router-link to="/tuto_javascript" class="nav__lien">
+                  JavaScript
+                </router-link>
+              </li>
+            </ul>
+            <li class="nav__ligne nav__ligne--titre">Back</li>
+            <ul class="nav__ssderoulant">
+              <li class="nav__ligne"><router-link to="/tuto_cms" class="nav__lien"> CMS </router-link></li>
+              <li class="nav__ligne"><router-link to="/tuto_php" class="nav__lien"> PHP </router-link></li>
+              <li class="nav__ligne"><router-link to="/tuto_sql" class="nav__lien"> MySQL </router-link></li>
+              
+            </ul>
           </ul>
         </li>
-        
       </ul>
     </nav>
-    <!-- <router-link to="/search" class="header__btn header__btn--search">
+    <router-link to="/search" class="header__btn header__btn--search">
       <button type="search" class="header__button header__button--search">
         <svg
           width="25"
@@ -175,19 +212,21 @@
           />
         </svg>
       </button>
-    </router-link> -->
+    </router-link>
   </header>
 </template>
 
 <script>
 import param from "@/param/param";
-import appService from "@/services/appService";
-import Connect from "@/components/modules/modal/connect";
-import Modal from "@/components/modules/modal/modal";
+import appService from '@/services/appService';
+import Connect from '@/components/modules/modal/connect';
+import Modal from '@/components/modules/modal/modal';
+
+
 
 export default {
   name: "Header",
-  components: { Connect, Modal },
+  components : {Connect, Modal},
   data() {
     return {
       liste: [],
@@ -197,11 +236,11 @@ export default {
         token: null,
         role: null,
       },
-      titre: null,
+      titre:null,
       menuIsOpen: "",
       burgerIsOpen: "",
-      isConnectvisible: false,
-      isModalvisible: false,
+      isConnectvisible : false,
+      isModalvisible :false, 
     };
   },
   created() {
@@ -219,56 +258,55 @@ export default {
       )
       .catch((error) => console.log(error));
   },
-  methods: {
-    connect: function () {
+  methods:{
+    connect:function(){
       console.log("Connect");
 
       let params = new FormData();
-      params.append("username", this.utilisateur.username);
-      params.append("password", this.utilisateur.password);
+      params.append('username', this.utilisateur.username);
+      params.append('password', this.utilisateur.password);
 
       axios({
-        method: "post",
+        method: 'post',
         // url: param.auth+"token",
         url: param.auth,
-        data: params,
+        data: params
+      }).then(function(response) {
+        console.log("reponse token", response);
+        this.utilisateur = response.data;
+        console.log("utilisateur", response.data);
+        this.titre = this.utilisateur.user_display_name;
+        // $('#cnxModal').modal('hide');
+        // save local
+
+        let localValues = {
+          nom:    this.utilisateur.user_display_name,
+          role:   this.utilisateur.user_role[0],
+          token:  this.utilisateur.token
+        };
+        appService.setLocal(localValues);
+
+      }.bind(this))
+      .catch(error => {
+        console.log("erreur de connexion", error);
+
+        // this.message = param.message.errCnx;
       })
-        .then(
-          function (response) {
-            console.log("reponse token", response);
-            this.utilisateur = response.data;
-            console.log("utilisateur", response.data);
-            this.titre = this.utilisateur.user_display_name;
-            // $('#cnxModal').modal('hide');
-            // save local
-
-            let localValues = {
-              nom: this.utilisateur.user_display_name,
-              role: this.utilisateur.user_role[0],
-              token: this.utilisateur.token,
-            };
-            appService.setLocal(localValues);
-          }.bind(this)
-        )
-        .catch((error) => {
-          console.log("erreur de connexion", error);
-
-          // this.message = param.message.errCnx;
-        });
     },
-    showConnect() {
-      this.isConnectvisible = true;
+    showConnect(){
+      this.isConnectvisible= true;
     },
-    closeConnect() {
-      this.isConnectvisible = false;
+    closeConnect(){
+      this.isConnectvisible= false; 
     },
-    showModal() {
+    showModal(){
       this.isModalvisible = true;
     },
-    closeModal() {
+    closeModal(){
       this.isModalvisible = false;
     },
-  },
+        }
+  
 };
 </script>
 
