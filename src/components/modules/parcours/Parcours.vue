@@ -25,7 +25,9 @@
            </div>
             <div class="parcours__contenu contenu">
             <p class="contenu__resume">{{parcour.resume}}</p>
-            <a :href="parcour.lien" class="contenu__lien">{{parcour.lien}}</a>
+            <form :action="parcour.lien" class="contenu__form" >
+                <input type="submit" value="Voir le tuto"  class="contenu__lien">
+            </form>
             </div>
        </div>
     </div>
