@@ -25,7 +25,7 @@
            </div>
             <div class="parcours__contenu contenu">
             <p class="contenu__resume">{{parcour.resume}}</p>
-            <p class="contenu__lien">{{parcour.lien}}</p>
+            <a :href="parcour.lien" class="contenu__lien">{{parcour.lien}}</a>
             </div>
        </div>
     </div>
