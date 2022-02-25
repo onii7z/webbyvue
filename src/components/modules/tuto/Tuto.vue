@@ -28,20 +28,18 @@
     <form class="recherche__ajout" action="https://webby.houlle.org/wp-admin/post-new.php?post_type=tuto">
     <input  type="submit" class="recherche__btn" value="Ajouter un Tuto">
     </form>
-    <div class="tutos">
-      <div class="grid">
-        <p v-if="recherche.length == 0">Aucun résultat</p>
-        <div class="cards" v-for="tuto in recherche" :key="tuto.id">
-          <img class="cards__img" :src="tuto.image" alt="" />
-          <h3 class="cards__titre">{{ tuto.titre }}</h3>
-          <h5 class="cards__desc">Note : {{ tuto.note }}/5</h5>
-          <router-link
-            class="cards__lien"
-            :to="{ name: 'Module_Tuto', params: { id: tuto.id } }"
-          >
-            <p class="cards__sstitre">Voir le tuto</p>
-          </router-link>
-        </div>
+    <div class="grid">
+      <p v-if="recherche.length == 0">Aucun résultat</p>
+      <div class="cards" v-for="tuto in recherche" :key="tuto.id">
+        <img class="cards__img" :src="tuto.image" alt="" />
+        <h3 class="cards__titre">{{ tuto.titre }}</h3>
+        <h5 class="cards__desc">Note : {{ tuto.note }}/5</h5>
+        <router-link
+          class="cards__lien"
+          :to="{ name: 'Module_Tuto', params: { id: tuto.id } }"
+        >
+          <p class="cards__sstitre">Voir le tuto</p>
+        </router-link>
       </div>
     </div>
   </div>
