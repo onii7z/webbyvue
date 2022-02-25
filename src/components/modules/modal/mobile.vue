@@ -1,21 +1,34 @@
 <template>
     <div
-      class="burgerform burger"
+      class="burger__connexion"
       id="connexion"
     >
-      <form class="burgerform">
+      <form class="burgerform burger">
         <button @click="close" class="burger__close">
           <svg
-            class="burger__svg"
+            class="burger__svg--mobile"
             width="38"
             height="38"
-            viewBox="0 0 38 38"
-            fill="none"
+            fill="white"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M31.6666 6.33331L6.33331 31.6666M31.6666 31.6666L6.33331 6.33331L31.6666 31.6666Z"
               stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+          <svg
+            class="burger__svg--desktop"
+            width="38"
+            height="38"
+            fill="#1DD0D7"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M31.6666 6.33331L6.33331 31.6666M31.6666 31.6666L6.33331 6.33331L31.6666 31.6666Z"
+              stroke="#1DD0D7"
               stroke-width="2"
               stroke-linecap="round"
             />

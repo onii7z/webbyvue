@@ -1,5 +1,5 @@
 .sommaire {
-    padding-left : 20px;
+    margin-left : 20px;
     padding-bottom : 20px;
     &__title {
         font : {
@@ -7,10 +7,17 @@
             family : $font-titre;
         }
         color : $green;
-        text-transform: uppercase;
         margin-top : 5px;
         margin-bottom : 10px;
         text-align: center;
+    }
+    &__subtitle {
+        color : $purple;
+        padding-bottom : 5px;
+        font-family : $font-text;
+        font-size : rem(40);
+        margin-left : 20px;
+        margin-bottom : 10px;        
     }
     &__mot{
         color : $purple;
@@ -22,33 +29,52 @@
     &__link {
         text-decoration : none;
     }
-    &__list {
-        margin-left : 20px;
-    }
     &__desc {
         margin-left : 30px;
         margin-bottom : 10px;
-        font-size : $text-xl;
+        font-size : $text-md;
+        margin-right : 20px;
     }
     &__lien {
         text-decoration: none;
         color : $skyblue; 
         margin-left: 30px;
-        font-size : $text-md
+        font : {
+            size : $text-xl;
+            family : $font-text;
+        }
+        margin-bottom : 10px;
+        margin-left : 30px;
     }
 }
 
+
 @media (min-width: 1000px) {
-    .lexique {
-            &__title {
+    .sommaire {
+        &__title {
             font : {
                 size : $title-xxl;
                 family : $font-titre;
             }
         }
         &__mot {
-          font-size : $title-lg;
-          padding-bottom : 5px;
-    }
+            font-size : $title-lg;
+            padding-bottom : 5px;
+        }
+        &__list {
+            margin-left : 140px;
+        }
+        &__subtitle {
+            font-size : $text-xxl;
+            margin-left : 140px;
+        }
+        &__desc {
+            font-size : $text-xl;
+            margin-left : 200px;
+            margin-right : 200px;
+        }
+        &__lien {
+            margin-left : 200px;
+        }
 }
 }

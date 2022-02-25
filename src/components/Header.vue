@@ -10,10 +10,10 @@
     </h1>
     <!-- inscription/connexion -->
     <div class="header__btn">
-      <button @click="showConnect" type="submit" class="header__button">
-        {{ titre }}
-      </button>
-      <Connect v-show="isConnectvisible" @close="closeConnect" />
+      <button @click ="showMobile" type="submit" class="header__button">{{titre}}</button>
+      <Mobile v-show="isMobilevisible"
+      @close="closeMobile"
+    />
 
       <a href="https://webby.houlle.org/wp-login.php?action=register">
         <button type="submit" class="header__button">Inscription</button>
@@ -21,79 +21,29 @@
     </div>
     <!-- Menu Burger -->
     <!-- Nav Burger -->
+    
+    <div class="headerform" >
 
-    <div class="headerform">
-      <button @click="showModal" class="headerbtn menuBurger">
-        <svg
-          width="38"
-          height="37"
-          viewBox="0 0 38 37"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <ellipse cx="19" cy="18.5" rx="19" ry="18.5" fill="#585CA6" />
-          <path
-            d="M28 24H10V22H28V24ZM28 19H10V17H28V19ZM28 14H10V12H28V14Z"
-            fill="white"
-          />
-        </svg>
-      </button>
-      <Modal v-show="isModalvisible" @close="closeModal" />
-    </div>
 
-    <!-- Modal de connexion version mobile -->
-    <!-- 
-    <div
-      class="burgerform burger"
-      :class="burgerIsOpen && 'burger--open'"
-      id="connexion"
-    >
-      <form class="burgerform">
-        <a href="#" class="burger__close">
-          <svg
-            class="burger__svg"
+          <button @click ="showModal" class="headerbtn menuBurger" >
+            <svg
             width="38"
-            height="38"
-            viewBox="0 0 38 38"
+            height="37"
+            viewBox="0 0 38 37"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-          >
+            >
+            <ellipse cx="19" cy="18.5" rx="19" ry="18.5" fill="#585CA6" />
             <path
-              d="M31.6666 6.33331L6.33331 31.6666M31.6666 31.6666L6.33331 6.33331L31.6666 31.6666Z"
-              stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
+              d="M28 24H10V22H28V24ZM28 19H10V17H28V19ZM28 14H10V12H28V14Z"
+              fill="white"
             />
-          </svg>
-        </a>
-        <p class="burger__desc">Nom d'utilisateur</p>
-        <input class="burger__form" type="text" v-model="utilisateur.username"  />
-        <p class="burger__desc">Mot de passe</p>
-        <input class="burger__form" type="password" v-model="utilisateur.password" />
-        <a class="burger__link" href="#">Mot de passe oublié ? </a>
-        <button class="burger__submit" type="submit" value="Se connecter" @click="connect" >{{titre}}</button>
-        <button class="burger__btn">S'inscrire</button>
-      </form>
-    </div> -->
-
-    <!-- Modal de connexion version bureau -->
-
-    <!-- <div class="connectform connect" :class="connectIsOpen && 'connect--open'" id="connection">
-          <form class="connectform">
-              <a href="#modal" class="connect__close">
-                <svg class="connect__svg" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M31.6666 6.33331L6.33331 31.6666M31.6666 31.6666L6.33331 6.33331L31.6666 31.6666Z" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-            </a>
-            <p class="connect__desc" >Nom d'utilisateur</p>
-            <input class="connect__form" type="text">
-            <p class="connect__desc">Mot de passe</p>
-            <input class="connect__form" type="password">
-            <a class="connect__link" href="#">Mot de passe oublié ? </a>
-            <input class="header__submit" type="submit" value="Se connecter">
-           
-          </form>
-        </div> -->
+            </svg>
+          </button>
+          <Modal v-show="isModalvisible"
+      @close="closeModal"
+    />
+    </div>
 
     <!-- nav du header -->
     <nav class="header__nav nav">
@@ -181,13 +131,15 @@
 
 <script>
 import param from "@/param/param";
-import appService from "@/services/appService";
-import Connect from "@/components/modules/modal/connect";
-import Modal from "@/components/modules/modal/modal";
+import appService from '@/services/appService';
+import Mobile from '@/components/modules/modal/mobile'
+import Modal from '@/components/modules/modal/modal';
+
+
 
 export default {
   name: "Header",
-  components: { Connect, Modal },
+  components : {Mobile, Modal},
   data() {
     return {
       liste: [],
@@ -197,11 +149,9 @@ export default {
         token: null,
         role: null,
       },
-      titre: null,
-      menuIsOpen: "",
-      burgerIsOpen: "",
-      isConnectvisible: false,
-      isModalvisible: false,
+      titre:null,
+      isMobilevisible : false,
+      isModalvisible :false, 
     };
   },
   created() {
@@ -256,11 +206,11 @@ export default {
           // this.message = param.message.errCnx;
         });
     },
-    showConnect() {
-      this.isConnectvisible = true;
+    showMobile(){
+      this.isMobilevisible= true;
     },
-    closeConnect() {
-      this.isConnectvisible = false;
+    closeMobile(){
+      this.isMobilevisible= false; 
     },
     showModal() {
       this.isModalvisible = true;

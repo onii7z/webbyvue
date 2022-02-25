@@ -1,16 +1,17 @@
 <template>
-    <div>
-        <h3>{{liste.title.rendered}}</h3>
-        <div v-for="content in liste.acf.contenu" :key="content.id">
-            <h4>{{content.sous_titre}}</h4>
-            <div v-for="area in content.zone_contenu" :key="area.id">
-                <p>{{area.area_text}}</p><br><br>
+    <div class="presentation">
+        <h3 class="presentation__title">{{liste.title.rendered}}</h3>
+        <div class="presentation__contenu" v-for="content in liste.acf.contenu" :key="content.id">
+            <h4 class="presentation__subtitle">{{content.sous_titre}}</h4>
+            <img class="presentation__logo" src="../../../assets/WebbyYeux.gif" alt="Webby" />
+            <div class="presentation__text" v-for="area in content.zone_contenu" :key="area.id">
+                <p class="presentation__desc">{{area.area_text}}</p><br><br>
             </div>
-            <div v-for="link in content.lien_contenu" :key="link.id">
-                <p>{{link.link_content}}</p>
+            <div class="presentation__clic" v-for="link in content.lien_contenu" :key="link.id">
+                <p class="presentation__link">{{link.link_content}}</p>
             </div>
         </div>
-        <router-link to="/liste_parcours" > Liste des parcours </router-link>
+        <router-link class="presentation__lien" to="/liste_parcours" > Liste des parcours </router-link>
     </div>
 </template>
 

@@ -28,7 +28,6 @@ import Contact from '@/components/pages/Contact'
 import Search from '@/components/pages/Search'
 
 import Modal from '@/components/modules/modal/modal'
-import Connect from '@/components/modules/modal/connect'
 import Mobile from '@/components/modules/modal/mobile'
 
 Vue.use(Router)
@@ -57,7 +56,6 @@ export default new Router({
     {path: '/contact', name: 'Contact', component: Contact},
     {path: '/search', name: 'Search', component: Search},
     {path: '/modal', name: 'Modal', component: Modal},
-    {path : '/connect', name : 'Connect', component : Connect},
     {path : '/mobile', name : 'Mobile', component : Mobile},
     
 

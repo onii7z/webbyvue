@@ -1,5 +1,5 @@
 <template>
-    <div class="commaire">
+    <div class="sommaire">
         <h2 class="sommaire__title">Liste des parcours </h2>
         <div class="sommaire__contenu" v-for="parcours in liste" :key="parcours.id">
             <ul class="sommaire__list">
