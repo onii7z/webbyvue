@@ -1,7 +1,5 @@
 <template>
-  <div style="height: 100vh;
-		display: flex;
-		flex-direction: column;">
+  <div class="foot">
     <Header></Header>
     <main id="main">
     <router-view></router-view>
@@ -27,7 +25,11 @@
 </script>
 
 <style scoped>
-
+ .foot {
+   height: 100vh;
+		display: flex;
+		flex-direction: column;
+ }
 </style>
   
 
