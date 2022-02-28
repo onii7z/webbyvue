@@ -7,8 +7,7 @@
       <label class="form__desc"> Votre Email : </label><br>
       <input class="form__input" type="email" name="user_email" placeholder="Email" /><br>
       <label class="form__desc">Message : </label><br>
-      <!-- <textarea class="form__input form__input--text" rows="4" name="message"></textarea><br> -->
-        <input class="form__input form__input--text"  type="textarea" name="message" placeholder="Entrez votre message ici"><br>
+      <input class="form__input form__input--text"  type="textarea" name="message" placeholder="Entrez votre message ici"><br>
       <input class="form__btn" type="submit" value="Envoyer" /><br>
     </form>
   </div>
@@ -29,7 +28,9 @@ export default {
         )
         .then(
           (result) => {
+            // console.log('form', this.user_name);
             console.log("SUCCESS!", result.text);
+            alert("E-mail envoyé");
           },
           (error) => {
             console.log("FAILED...", error.text);
