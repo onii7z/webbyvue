@@ -1,5 +1,7 @@
 <template>
-  <div>
+  <div style="height: 100vh;
+		display: flex;
+		flex-direction: column;">
     <Header></Header>
     <main id="main">
     <router-view></router-view>
