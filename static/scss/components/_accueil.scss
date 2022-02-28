@@ -61,10 +61,11 @@
 			size : $text-md;
 			family : $font-text;
 		}
-		margin-left: 20px ;
-		display : inline;
+		// margin-left: 20px ;
+		// display : block;
 		height: 25px;
 		padding : 5px;
+		// width: rem(150);
 	}
 	&__lien {
 		text-decoration: none;

@@ -34,6 +34,7 @@ export default {
           },
           (error) => {
             console.log("FAILED...", error.text);
+            alert("Vous devez être connecté");
           }
         );
     },
