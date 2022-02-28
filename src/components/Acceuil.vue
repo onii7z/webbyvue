@@ -91,11 +91,11 @@
           </section>
 
           <section class="section --tuto">
-            <img class="section__img" src="../assets/imgs/acceuil2.jpg" alt="#">
-            <h2 class="section__title">Partagez et notez les tutos</h2>
-            <p class="section__desc">Les étudiants de la grande école du numérique et du département métiers et multimédias de l’internet de l’université de Montbéliard vous partagent les tutoriels leur ayant été utiles. A vous de noter ces tutoriels pour aider la communauté à choisir celui qui pourra l’aider dans son projet. </p>
-            <div class="section__link">
-              <router-link to="/tuto" class="section__lien"> Découvrez nos tutos ... </router-link>
+            <img class="section__img --tuto__img" src="../assets/imgs/acceuil2.jpg" alt="#">
+            <h2 class="section__title --tuto__title">Partagez et notez les tutos</h2>
+            <p class="section__desc --tuto__desc">Les étudiants de la grande école du numérique et du département métiers et multimédias de l’internet de l’université de Montbéliard vous partagent les tutoriels leur ayant été utiles. A vous de noter ces tutoriels pour aider la communauté à choisir celui qui pourra l’aider dans son projet. </p>
+            <div class="section__link --tuto__link">
+              <router-link to="/tuto" class="section__lien --tuto__lien"> Découvrez nos tutos ... </router-link>
             </div>
           </section>
 
