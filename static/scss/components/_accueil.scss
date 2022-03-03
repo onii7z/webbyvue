@@ -61,16 +61,17 @@
 			size : $text-md;
 			family : $font-text;
 		}
-		// margin-left: 20px ;
-		// display : block;
+		display : inline-block;
 		height: 25px;
 		padding : 5px;
-		// width: rem(150);
 	}
 	&__lien {
 		text-decoration: none;
 		color : $white;
 		padding-left : 5px;
+	}
+	&__position {
+		margin-left : 20px;
 	}
 }
 @media (min-width: 1000px) {
@@ -135,9 +136,15 @@
 			margin-left : 0;
 		}
 		&__link {
+			display : inline-block;
+			margin-left : 0;
+		}
+		&__lien {
+			padding : 10px;
+		}
+		&__position {
 			grid-column: 6/ span 2;
 			grid-row: 3/ span 1;
-			margin-left : 0;
 		}
 	}
 		.--about {
@@ -157,13 +164,13 @@
 				margin : 0;
 			}
 			&__link {
-				grid-column: 1/ 3;
+				display : inline-block;
 				margin : 0;
 			}
-			&__dash {
-				grid-column: 1/ span 4;
-			}
-		}
+			&__position {
+				grid-column: 1/ 3;
+			}	
+	}
 		.--parcours {
 			grid-row: 3/ span 1;
 }
