@@ -152,7 +152,7 @@
                 var mult = temp1 * temp2;
                 console.log('resul mult', mult);
                 
-                // On addicte le résultat précedent avec la note mise par l'utilisateur
+                // On addicte le résultat précedent avec l0a note mise par l'utilisateur
                 var add = mult + temp3;
                 console.log('resul add', add);
 
