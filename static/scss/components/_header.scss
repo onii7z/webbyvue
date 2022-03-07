@@ -231,8 +231,7 @@
     .burgerform {
         position : fixed;
         display : grid;
-        grid-template-columns: repeat(7, 1fr);
-        gap : 20;
+        grid-template-columns: repeat(6, 1fr);
 
     }
     .burger {
@@ -252,6 +251,7 @@
             justify-self: end;
             align-self: start;
             border : none;
+            width: 100%;
             }
         &__svg--mobile {
             margin-top : 26px;
