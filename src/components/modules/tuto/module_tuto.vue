@@ -103,6 +103,7 @@ export default {
     })
       .then((response) => {
         this.tuto = response.data;
+        console.log('tuto', this.tuto);
       })
       .catch((error) => console.log("erreur tuto", error));
   },
